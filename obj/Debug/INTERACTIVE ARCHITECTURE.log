@@ -1,0 +1,30 @@
+﻿  main.cpp
+  ofApp.cpp
+  Calibration.cpp
+  ContourFinder.cpp
+  Flow.cpp
+  Helpers.cpp
+  Kalman.cpp
+  ObjectFinder.cpp
+H:\of_v0.9.8_vs_release\addons\ofxCv\libs\ofxCv\include\ofxCv/Utilities.h(12): fatal error C1083: Cannot open include file: 'opencv2/opencv.hpp': No such file or directory (compiling source file ..\..\..\addons\ofxCv\libs\ofxCv\src\ObjectFinder.cpp)
+H:\of_v0.9.8_vs_release\addons\ofxCv\libs\ofxCv\include\ofxCv/Helpers.h(8): fatal error C1083: Cannot open include file: 'opencv2/opencv.hpp': No such file or directory (compiling source file ..\..\..\addons\ofxCv\libs\ofxCv\src\Helpers.cpp)
+H:\of_v0.9.8_vs_release\addons\ofxCv\libs\ofxCv\include\ofxCv/Utilities.h(12): fatal error C1083: Cannot open include file: 'opencv2/opencv.hpp': No such file or directory (compiling source file ..\..\..\addons\ofxCv\libs\ofxCv\src\ContourFinder.cpp)
+H:\of_v0.9.8_vs_release\addons\ofxCv\src\ofxCv.h(4): fatal error C1083: Cannot open include file: 'opencv2/opencv.hpp': No such file or directory (compiling source file ..\..\..\addons\ofxCv\libs\ofxCv\src\Calibration.cpp)
+  RunningBackground.cpp
+H:\of_v0.9.8_vs_release\addons\ofxCv\src\ofxCv.h(4): fatal error C1083: Cannot open include file: 'opencv2/opencv.hpp': No such file or directory (compiling source file ..\..\..\addons\ofxCv\libs\ofxCv\src\Flow.cpp)
+H:\of_v0.9.8_vs_release\addons\ofxCv\src\ofxCv.h(4): fatal error C1083: Cannot open include file: 'opencv2/opencv.hpp': No such file or directory (compiling source file ..\..\..\addons\ofxCv\libs\ofxCv\src\Kalman.cpp)
+  Tracker.cpp
+  Utilities.cpp
+  Wrappers.cpp
+H:\of_v0.9.8_vs_release\addons\ofxCv\libs\ofxCv\include\ofxCv/Tracker.h(47): fatal error C1083: Cannot open include file: 'opencv2/opencv.hpp': No such file or directory (compiling source file ..\..\..\addons\ofxCv\libs\ofxCv\src\Tracker.cpp)
+H:\of_v0.9.8_vs_release\addons\ofxCv\libs\ofxCv\include\ofxCv/Utilities.h(12): fatal error C1083: Cannot open include file: 'opencv2/opencv.hpp': No such file or directory (compiling source file ..\..\..\addons\ofxCv\libs\ofxCv\src\RunningBackground.cpp)
+H:\of_v0.9.8_vs_release\addons\ofxCv\libs\ofxCv\include\ofxCv/Wrappers.h(30): fatal error C1083: Cannot open include file: 'opencv2/opencv.hpp': No such file or directory (compiling source file ..\..\..\addons\ofxCv\libs\ofxCv\src\Wrappers.cpp)
+H:\of_v0.9.8_vs_release\addons\ofxCv\libs\ofxCv\include\ofxCv/Utilities.h(12): fatal error C1083: Cannot open include file: 'opencv2/opencv.hpp': No such file or directory (compiling source file ..\..\..\addons\ofxCv\libs\ofxCv\src\Utilities.cpp)
+h:\of_v0.9.8_vs_release\apps\myapps\interactive architecture\src\User.h(17): error C2065: 'len': undeclared identifier (compiling source file src\ofApp.cpp)
+h:\of_v0.9.8_vs_release\apps\myapps\interactive architecture\src\User.h(17): error C2065: 'len': undeclared identifier (compiling source file src\main.cpp)
+h:\of_v0.9.8_vs_release\apps\myapps\interactive architecture\src\User.h(63): error C2065: 'len': undeclared identifier (compiling source file src\ofApp.cpp)
+h:\of_v0.9.8_vs_release\apps\myapps\interactive architecture\src\User.h(67): error C2065: 'index': undeclared identifier (compiling source file src\ofApp.cpp)
+h:\of_v0.9.8_vs_release\apps\myapps\interactive architecture\src\User.h(84): error C2065: 'len': undeclared identifier (compiling source file src\ofApp.cpp)
+h:\of_v0.9.8_vs_release\apps\myapps\interactive architecture\src\User.h(63): error C2065: 'len': undeclared identifier (compiling source file src\main.cpp)
+h:\of_v0.9.8_vs_release\apps\myapps\interactive architecture\src\User.h(67): error C2065: 'index': undeclared identifier (compiling source file src\main.cpp)
+h:\of_v0.9.8_vs_release\apps\myapps\interactive architecture\src\User.h(84): error C2065: 'len': undeclared identifier (compiling source file src\main.cpp)
