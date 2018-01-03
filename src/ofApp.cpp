@@ -15,15 +15,48 @@ void ofApp::setup(){
 	// this adds your app as a listener for the server
 	server.addListener(this);
 
-	ofBackground(0);
-	ofSetFrameRate(60);
 
+	/// parts from video recorder
+	sampleRate = 44100;
+	channels = 2;
+
+	ofSetFrameRate(60);
+	ofSetLogLevel(OF_LOG_VERBOSE);
+	vidGrabber.setDesiredFrameRate(30);
+	vidGrabber.initGrabber(640, 480);
+#ifdef TARGET_WIN32
+	vidRecorder.setFfmpegLocation("ffmpeg"); // use this is you have ffmpeg installed in your data folder
+#endif
+
+					  // override the default codecs if you like
+					  // run 'ffmpeg -codecs' to find out what your implementation supports (or -formats on some older versions)
+	vidRecorder.setVideoCodec("mpeg4");
+	vidRecorder.setVideoBitrate("800k");
+	vidRecorder.setAudioCodec("mp3");
+	vidRecorder.setAudioBitrate("192k");
+	soundStream.setup(this, 0, channels, sampleRate, 256, 1);
+	ofSetWindowShape(vidGrabber.getWidth(), vidGrabber.getHeight());
+	bRecording = false;
+	ofEnableAlphaBlending();
 
 }
 
 //--------------------------------------------------------------
 void ofApp::update(){
 
+	vidGrabber.update();
+	if (vidGrabber.isFrameNew() && bRecording) {
+		bool success = vidRecorder.addFrame(vidGrabber.getPixelsRef());
+		if (!success) {
+			ofLogWarning("This frame was not added!");
+		}
+	}
+
+}
+
+void ofApp::audioIn(float *input, int bufferSize, int nChannels) {
+	if (bRecording)
+		vidRecorder.addAudioSamples(input, bufferSize, nChannels);
 }
 
 //--------------------------------------------------------------

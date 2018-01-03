@@ -4,6 +4,7 @@
 #include "User.h"
 #include "QAdata.h"
 #include <stdio.h>
+#include "ofxVideoRecorder.h"
 
 #include "ofxLibwebsockets.h"
 #define NUM_MESSAGES 30
@@ -38,11 +39,6 @@ class ofApp : public ofBaseApp{
 
 		bool bSetup;
 
-		//queue of rec'd messages
-		vector<string> messages;
-
-		//string to send to clients
-		string toSend;
 
 		// websocket methods
 		void onConnect(ofxLibwebsockets::Event& args);
@@ -51,5 +47,18 @@ class ofApp : public ofBaseApp{
 		void onIdle(ofxLibwebsockets::Event& args);
 		void onMessage(ofxLibwebsockets::Event& args);
 		void onBroadcast(ofxLibwebsockets::Event& args);
+
+		//recorder//
+		void audioIn(float * input, int bufferSize, int nChannels);
+		ofVideoGrabber      vidGrabber;
+		ofxVideoRecorder    vidRecorder;
+		ofSoundStream       soundStream;
+		bool bRecording;
+		int sampleRate;
+		int channels;
+		string fileName;
+		string fileExt;
+		ofFbo recordFbo;
+		ofPixels recordPixels;
 
 };

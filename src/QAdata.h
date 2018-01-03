@@ -1,5 +1,6 @@
 #pragma once
 #include "ofMain.h"
+#include "ofapp"
 
 class QAdata
 {
@@ -21,15 +22,30 @@ public:
 				{
 				cout << "Press the button to record"<<endl; //replace with gui part
 				//listen for arduino button press//or normal button press
-				//startrecording
-				//delayforafewseconds
-				//stoprecording
+				startrecording();
+				ofSleepMillis(_insert_number);
+				stoprecording();
 				if (verification != 1)
 					cout << "wrong question, try again" << endl;
-				ofSleepMillis(//number) //delay
+				ofSleepMillis(_insert_number); //delay
 
 				}
 
+		}
+
+		void startrecording()
+		{
+			bRecording = !bRecording;
+			if (bRecording && !vidRecorder.isInitialized()) {
+				vidRecorder.setup(fileName + ofGetTimestampString() + fileExt, vidGrabber.getWidth(), vidGrabber.getHeight(), 30, sampleRate, channels);
+
+			}
+		}
+
+		void stoprecording()
+		{
+			bRecording = false;
+			vidRecorder.close();
 		}
 
 		void play()
@@ -78,6 +94,8 @@ public:
 		{
 
 		}
+
+
 
 		QAdata()
 		{
