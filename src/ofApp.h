@@ -3,12 +3,14 @@
 #include "ofMain.h"
 #include "User.h"
 #include "QAdata.h"
+#include <stdio.h>
 
 #include "ofxLibwebsockets.h"
 #define NUM_MESSAGES 30
 
 const int len = 1;
-
+int flagquestion = 0,flagqanumber=0; //global flag which is used to see if it needs to listen to the incoming stream of voice // flag for QA number to be used for veryfying the question asked
+float tolerance = 90.0; //tolerance for voice recognition
 
 
 class ofApp : public ofBaseApp{

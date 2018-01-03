@@ -7,6 +7,8 @@ class QAdata
 public:
 			//int question; //checks wether the object is a question(1) or an answer(2)
 			//int data; //checks wether the object already had data or not
+			//use normal laptop environment with keypressed for testing the code
+
 		int verification; //Checks wether the file is verified or not
 		string text = " "; //Collects the on screen text
 		string path; //path of file
@@ -15,11 +17,24 @@ public:
 		void record()// function that triggers recording
 		{
 			flagquestion = 1;
+			while (verification != 1)
+				{
+				cout << "Press the button to record"<<endl; //replace with gui part
+				//listen for arduino button press//or normal button press
+				//startrecording
+				//delayforafewseconds
+				//stoprecording
+				if (verification != 1)
+					cout << "wrong question, try again" << endl;
+				ofSleepMillis(//number) //delay
+
+				}
 
 		}
 
 		void play()
 		{
+			//code for playing the correct video once
 		}
 
 		void checkverify(string voice)

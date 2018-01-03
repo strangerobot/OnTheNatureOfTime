@@ -113,5 +113,6 @@ void ofApp::onIdle(ofxLibwebsockets::Event& args) {
 
 void ofApp::onMessage(ofxLibwebsockets::Event& args) {
 	cout << "message " << args.message << endl;
-	//curr
+	if(flagquestion==1)
+	currentuser.askquestion[flagqanumber].checkverify(args.message); //runs the verification function in the current users current askquestion
 }
