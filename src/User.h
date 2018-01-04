@@ -13,7 +13,7 @@ class User// holds the data of each user who interacts with the installation
 		//answergive  Answer to the questions to be asked by the user (index b) /from earlier user /      answer/ recorded/verified/(index b)/0,1
 	public:
 
-		int type,count; //question index 0=a, 1=b; //count is the user number for file saving purposes
+		int type,usernumber; //question index 0=a, 1=b; //count is the user number for file saving purposes
 		QAdata questionask[len], giveanswer[len], askquestion[len], answergive[len];
 
 		//constructors
@@ -54,7 +54,7 @@ class User// holds the data of each user who interacts with the installation
 	//<below> copies data from previous user and intializes question and paths for the new user
 	User(User &temp, int number) //constructor to switch to temp
 		{
-			count = number;
+			usernumber = number;
 		
 			if (temp.type == 0)
 				type = 1;
@@ -65,34 +65,35 @@ class User// holds the data of each user who interacts with the installation
 				questionask[i] = temp.askquestion[i];
 				answergive[i] = temp.giveanswer[i];
 				askquestion[i].text = index[i];//wait for definition of index
-				askquestion[i].path = ofToString(count) + "_askquestion.mp4";// write code here for path allocation
+				askquestion[i].path = ofToString(usernumber) + "_askquestion.mp4";// write code here for path allocation
 				giveanswer[i].verification = 1;
-				giveanswer[i].path = ofToString(count) + "_giveanswer.mp4";// write code here for path allocation
+				giveanswer[i].path = ofToString(usernumber) + "_giveanswer.mp4";// write code here for path allocation
 
 				//temp.askquestion[i].data=0;
 				//temp.giveanswer[i].data=0;
 
 				//spmething for path too
-
+				cout << "swithch_index_" << i << endl;
 			}
+			cout << "user_" << usernumber << "_initialised "<< endl;
 
 		} 
 
 	//<below> Runs the current user
 	void run()
 	{
-		for (int i = 0; i<len; i++)
+		cout << "Running_user_" << usernumber << endl;
+		for (int i = 0; i<len && ofGetKeyPressed() != 'e'; i++) //if e is pressed the program exits
 		{	
-			flagqanumber = i;
+			flagqanumber = i; //sends question number to the voice recognition code
+			while (ofGetKeyPressed() != 'c') { cout << "getquestion" << endl; };
 			questionask[i].play();
-			//arduino wait//
+			while (ofGetKeyPressed() != 'c') { cout << "reply" << endl; }; //wait till c is pressed //arduino wait
 			giveanswer[i].record();
-			//prompt//arduino wait//
+			while (ofGetKeyPressed() != 'c') { cout << "ask" << endl; }; //wait till c is pressed //arduino wait //prompt
 			askquestion[i].record();
-
-			//prompt//arduino wait//
+			while (ofGetKeyPressed() != 'c') { cout << "getreply" << endl; }; //wait till c is pressed //arduino wait //prompt
 			answergive[i].play();
-			//add exit node from arduino,make i>len
 		}
 	}
 	

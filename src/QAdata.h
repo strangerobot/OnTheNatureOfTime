@@ -1,6 +1,6 @@
 #pragma once
 #include "ofMain.h"
-#include "ofapp"
+#include "ofapp.h"
 
 class QAdata
 {
