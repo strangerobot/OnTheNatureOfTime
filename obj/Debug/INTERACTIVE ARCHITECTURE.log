@@ -6,25 +6,129 @@
   Helpers.cpp
   Kalman.cpp
   ObjectFinder.cpp
-H:\of_v0.9.8_vs_release\addons\ofxCv\libs\ofxCv\include\ofxCv/Utilities.h(12): fatal error C1083: Cannot open include file: 'opencv2/opencv.hpp': No such file or directory (compiling source file ..\..\..\addons\ofxCv\libs\ofxCv\src\ObjectFinder.cpp)
-H:\of_v0.9.8_vs_release\addons\ofxCv\libs\ofxCv\include\ofxCv/Helpers.h(8): fatal error C1083: Cannot open include file: 'opencv2/opencv.hpp': No such file or directory (compiling source file ..\..\..\addons\ofxCv\libs\ofxCv\src\Helpers.cpp)
-H:\of_v0.9.8_vs_release\addons\ofxCv\libs\ofxCv\include\ofxCv/Utilities.h(12): fatal error C1083: Cannot open include file: 'opencv2/opencv.hpp': No such file or directory (compiling source file ..\..\..\addons\ofxCv\libs\ofxCv\src\ContourFinder.cpp)
 H:\of_v0.9.8_vs_release\addons\ofxCv\src\ofxCv.h(4): fatal error C1083: Cannot open include file: 'opencv2/opencv.hpp': No such file or directory (compiling source file ..\..\..\addons\ofxCv\libs\ofxCv\src\Calibration.cpp)
-  RunningBackground.cpp
-H:\of_v0.9.8_vs_release\addons\ofxCv\src\ofxCv.h(4): fatal error C1083: Cannot open include file: 'opencv2/opencv.hpp': No such file or directory (compiling source file ..\..\..\addons\ofxCv\libs\ofxCv\src\Flow.cpp)
+H:\of_v0.9.8_vs_release\addons\ofxCv\libs\ofxCv\include\ofxCv/Utilities.h(12): fatal error C1083: Cannot open include file: 'opencv2/opencv.hpp': No such file or directory (compiling source file ..\..\..\addons\ofxCv\libs\ofxCv\src\ObjectFinder.cpp)
+H:\of_v0.9.8_vs_release\addons\ofxCv\libs\ofxCv\include\ofxCv/Utilities.h(12): fatal error C1083: Cannot open include file: 'opencv2/opencv.hpp': No such file or directory (compiling source file ..\..\..\addons\ofxCv\libs\ofxCv\src\ContourFinder.cpp)
 H:\of_v0.9.8_vs_release\addons\ofxCv\src\ofxCv.h(4): fatal error C1083: Cannot open include file: 'opencv2/opencv.hpp': No such file or directory (compiling source file ..\..\..\addons\ofxCv\libs\ofxCv\src\Kalman.cpp)
+H:\of_v0.9.8_vs_release\addons\ofxCv\src\ofxCv.h(4): fatal error C1083: Cannot open include file: 'opencv2/opencv.hpp': No such file or directory (compiling source file ..\..\..\addons\ofxCv\libs\ofxCv\src\Flow.cpp)
+H:\of_v0.9.8_vs_release\addons\ofxCv\libs\ofxCv\include\ofxCv/Helpers.h(8): fatal error C1083: Cannot open include file: 'opencv2/opencv.hpp': No such file or directory (compiling source file ..\..\..\addons\ofxCv\libs\ofxCv\src\Helpers.cpp)
+  RunningBackground.cpp
   Tracker.cpp
   Utilities.cpp
   Wrappers.cpp
-H:\of_v0.9.8_vs_release\addons\ofxCv\libs\ofxCv\include\ofxCv/Tracker.h(47): fatal error C1083: Cannot open include file: 'opencv2/opencv.hpp': No such file or directory (compiling source file ..\..\..\addons\ofxCv\libs\ofxCv\src\Tracker.cpp)
-H:\of_v0.9.8_vs_release\addons\ofxCv\libs\ofxCv\include\ofxCv/Utilities.h(12): fatal error C1083: Cannot open include file: 'opencv2/opencv.hpp': No such file or directory (compiling source file ..\..\..\addons\ofxCv\libs\ofxCv\src\RunningBackground.cpp)
-H:\of_v0.9.8_vs_release\addons\ofxCv\libs\ofxCv\include\ofxCv/Wrappers.h(30): fatal error C1083: Cannot open include file: 'opencv2/opencv.hpp': No such file or directory (compiling source file ..\..\..\addons\ofxCv\libs\ofxCv\src\Wrappers.cpp)
 H:\of_v0.9.8_vs_release\addons\ofxCv\libs\ofxCv\include\ofxCv/Utilities.h(12): fatal error C1083: Cannot open include file: 'opencv2/opencv.hpp': No such file or directory (compiling source file ..\..\..\addons\ofxCv\libs\ofxCv\src\Utilities.cpp)
-h:\of_v0.9.8_vs_release\apps\myapps\interactive architecture\src\User.h(17): error C2065: 'len': undeclared identifier (compiling source file src\ofApp.cpp)
-h:\of_v0.9.8_vs_release\apps\myapps\interactive architecture\src\User.h(17): error C2065: 'len': undeclared identifier (compiling source file src\main.cpp)
-h:\of_v0.9.8_vs_release\apps\myapps\interactive architecture\src\User.h(63): error C2065: 'len': undeclared identifier (compiling source file src\ofApp.cpp)
-h:\of_v0.9.8_vs_release\apps\myapps\interactive architecture\src\User.h(67): error C2065: 'index': undeclared identifier (compiling source file src\ofApp.cpp)
-h:\of_v0.9.8_vs_release\apps\myapps\interactive architecture\src\User.h(84): error C2065: 'len': undeclared identifier (compiling source file src\ofApp.cpp)
-h:\of_v0.9.8_vs_release\apps\myapps\interactive architecture\src\User.h(63): error C2065: 'len': undeclared identifier (compiling source file src\main.cpp)
-h:\of_v0.9.8_vs_release\apps\myapps\interactive architecture\src\User.h(67): error C2065: 'index': undeclared identifier (compiling source file src\main.cpp)
-h:\of_v0.9.8_vs_release\apps\myapps\interactive architecture\src\User.h(84): error C2065: 'len': undeclared identifier (compiling source file src\main.cpp)
+H:\of_v0.9.8_vs_release\addons\ofxCv\libs\ofxCv\include\ofxCv/Wrappers.h(30): fatal error C1083: Cannot open include file: 'opencv2/opencv.hpp': No such file or directory (compiling source file ..\..\..\addons\ofxCv\libs\ofxCv\src\Wrappers.cpp)
+H:\of_v0.9.8_vs_release\addons\ofxCv\libs\ofxCv\include\ofxCv/Utilities.h(12): fatal error C1083: Cannot open include file: 'opencv2/opencv.hpp': No such file or directory (compiling source file ..\..\..\addons\ofxCv\libs\ofxCv\src\RunningBackground.cpp)
+H:\of_v0.9.8_vs_release\addons\ofxCv\libs\ofxCv\include\ofxCv/Tracker.h(47): fatal error C1083: Cannot open include file: 'opencv2/opencv.hpp': No such file or directory (compiling source file ..\..\..\addons\ofxCv\libs\ofxCv\src\Tracker.cpp)
+h:\of_v0.9.8_vs_release\apps\myapps\interactive architecture shared\src\QAdata.h(22): error C2065: 'flagquestion': undeclared identifier (compiling source file src\ofApp.cpp)
+h:\of_v0.9.8_vs_release\apps\myapps\interactive architecture shared\src\QAdata.h(22): error C2065: 'flagquestion': undeclared identifier (compiling source file src\main.cpp)
+h:\of_v0.9.8_vs_release\apps\myapps\interactive architecture shared\src\QAdata.h(40): error C2065: 'bRecording': undeclared identifier (compiling source file src\ofApp.cpp)
+h:\of_v0.9.8_vs_release\apps\myapps\interactive architecture shared\src\QAdata.h(40): error C2065: 'bRecording': undeclared identifier (compiling source file src\main.cpp)
+h:\of_v0.9.8_vs_release\apps\myapps\interactive architecture shared\src\QAdata.h(41): error C2065: 'bRecording': undeclared identifier (compiling source file src\ofApp.cpp)
+h:\of_v0.9.8_vs_release\apps\myapps\interactive architecture shared\src\QAdata.h(41): error C2065: 'bRecording': undeclared identifier (compiling source file src\main.cpp)
+h:\of_v0.9.8_vs_release\apps\myapps\interactive architecture shared\src\QAdata.h(41): error C2065: 'vidRecorder': undeclared identifier (compiling source file src\ofApp.cpp)
+h:\of_v0.9.8_vs_release\apps\myapps\interactive architecture shared\src\QAdata.h(41): error C2065: 'vidRecorder': undeclared identifier (compiling source file src\main.cpp)
+h:\of_v0.9.8_vs_release\apps\myapps\interactive architecture shared\src\QAdata.h(41): error C2228: left of '.isInitialized' must have class/struct/union (compiling source file src\ofApp.cpp)
+  h:\of_v0.9.8_vs_release\apps\myapps\interactive architecture shared\src\QAdata.h(41): note: type is 'unknown-type' (compiling source file src\ofApp.cpp)
+h:\of_v0.9.8_vs_release\apps\myapps\interactive architecture shared\src\QAdata.h(41): error C2228: left of '.isInitialized' must have class/struct/union (compiling source file src\main.cpp)
+  h:\of_v0.9.8_vs_release\apps\myapps\interactive architecture shared\src\QAdata.h(41): note: type is 'unknown-type' (compiling source file src\main.cpp)
+h:\of_v0.9.8_vs_release\apps\myapps\interactive architecture shared\src\QAdata.h(42): error C2065: 'vidRecorder': undeclared identifier (compiling source file src\ofApp.cpp)
+h:\of_v0.9.8_vs_release\apps\myapps\interactive architecture shared\src\QAdata.h(42): error C2065: 'vidRecorder': undeclared identifier (compiling source file src\main.cpp)
+h:\of_v0.9.8_vs_release\apps\myapps\interactive architecture shared\src\QAdata.h(42): error C2228: left of '.setup' must have class/struct/union (compiling source file src\ofApp.cpp)
+  h:\of_v0.9.8_vs_release\apps\myapps\interactive architecture shared\src\QAdata.h(42): note: type is 'unknown-type' (compiling source file src\ofApp.cpp)
+h:\of_v0.9.8_vs_release\apps\myapps\interactive architecture shared\src\QAdata.h(42): error C2228: left of '.setup' must have class/struct/union (compiling source file src\main.cpp)
+  h:\of_v0.9.8_vs_release\apps\myapps\interactive architecture shared\src\QAdata.h(42): note: type is 'unknown-type' (compiling source file src\main.cpp)
+h:\of_v0.9.8_vs_release\apps\myapps\interactive architecture shared\src\QAdata.h(42): error C2065: 'vidGrabber': undeclared identifier (compiling source file src\ofApp.cpp)
+h:\of_v0.9.8_vs_release\apps\myapps\interactive architecture shared\src\QAdata.h(42): error C2228: left of '.getWidth' must have class/struct/union (compiling source file src\ofApp.cpp)
+  h:\of_v0.9.8_vs_release\apps\myapps\interactive architecture shared\src\QAdata.h(42): note: type is 'unknown-type' (compiling source file src\ofApp.cpp)
+h:\of_v0.9.8_vs_release\apps\myapps\interactive architecture shared\src\QAdata.h(42): error C2065: 'vidGrabber': undeclared identifier (compiling source file src\main.cpp)
+h:\of_v0.9.8_vs_release\apps\myapps\interactive architecture shared\src\QAdata.h(42): error C2228: left of '.getWidth' must have class/struct/union (compiling source file src\main.cpp)
+  h:\of_v0.9.8_vs_release\apps\myapps\interactive architecture shared\src\QAdata.h(42): note: type is 'unknown-type' (compiling source file src\main.cpp)
+h:\of_v0.9.8_vs_release\apps\myapps\interactive architecture shared\src\QAdata.h(42): error C2228: left of '.getHeight' must have class/struct/union (compiling source file src\ofApp.cpp)
+  h:\of_v0.9.8_vs_release\apps\myapps\interactive architecture shared\src\QAdata.h(42): note: type is 'unknown-type' (compiling source file src\ofApp.cpp)
+h:\of_v0.9.8_vs_release\apps\myapps\interactive architecture shared\src\QAdata.h(42): error C2065: 'sampleRate': undeclared identifier (compiling source file src\ofApp.cpp)
+h:\of_v0.9.8_vs_release\apps\myapps\interactive architecture shared\src\QAdata.h(42): error C2228: left of '.getHeight' must have class/struct/union (compiling source file src\main.cpp)
+  h:\of_v0.9.8_vs_release\apps\myapps\interactive architecture shared\src\QAdata.h(42): note: type is 'unknown-type' (compiling source file src\main.cpp)
+h:\of_v0.9.8_vs_release\apps\myapps\interactive architecture shared\src\QAdata.h(42): error C2065: 'channels': undeclared identifier (compiling source file src\ofApp.cpp)
+h:\of_v0.9.8_vs_release\apps\myapps\interactive architecture shared\src\QAdata.h(42): error C2065: 'sampleRate': undeclared identifier (compiling source file src\main.cpp)
+h:\of_v0.9.8_vs_release\apps\myapps\interactive architecture shared\src\QAdata.h(49): error C2065: 'bRecording': undeclared identifier (compiling source file src\ofApp.cpp)
+h:\of_v0.9.8_vs_release\apps\myapps\interactive architecture shared\src\QAdata.h(42): error C2065: 'channels': undeclared identifier (compiling source file src\main.cpp)
+h:\of_v0.9.8_vs_release\apps\myapps\interactive architecture shared\src\QAdata.h(50): error C2065: 'vidRecorder': undeclared identifier (compiling source file src\ofApp.cpp)
+h:\of_v0.9.8_vs_release\apps\myapps\interactive architecture shared\src\QAdata.h(49): error C2065: 'bRecording': undeclared identifier (compiling source file src\main.cpp)
+h:\of_v0.9.8_vs_release\apps\myapps\interactive architecture shared\src\QAdata.h(50): error C2228: left of '.close' must have class/struct/union (compiling source file src\ofApp.cpp)
+  h:\of_v0.9.8_vs_release\apps\myapps\interactive architecture shared\src\QAdata.h(50): note: type is 'unknown-type' (compiling source file src\ofApp.cpp)
+h:\of_v0.9.8_vs_release\apps\myapps\interactive architecture shared\src\QAdata.h(50): error C2065: 'vidRecorder': undeclared identifier (compiling source file src\main.cpp)
+h:\of_v0.9.8_vs_release\apps\myapps\interactive architecture shared\src\QAdata.h(61): error C2065: 'tolerance': undeclared identifier (compiling source file src\ofApp.cpp)
+h:\of_v0.9.8_vs_release\apps\myapps\interactive architecture shared\src\QAdata.h(50): error C2228: left of '.close' must have class/struct/union (compiling source file src\main.cpp)
+  h:\of_v0.9.8_vs_release\apps\myapps\interactive architecture shared\src\QAdata.h(50): note: type is 'unknown-type' (compiling source file src\main.cpp)
+h:\of_v0.9.8_vs_release\apps\myapps\interactive architecture shared\src\QAdata.h(64): error C2065: 'flagquestion': undeclared identifier (compiling source file src\ofApp.cpp)
+h:\of_v0.9.8_vs_release\apps\myapps\interactive architecture shared\src\QAdata.h(61): error C2065: 'tolerance': undeclared identifier (compiling source file src\main.cpp)
+h:\of_v0.9.8_vs_release\apps\myapps\interactive architecture shared\src\QAdata.h(64): error C2065: 'flagquestion': undeclared identifier (compiling source file src\main.cpp)
+h:\of_v0.9.8_vs_release\apps\myapps\interactive architecture shared\src\QAdata.h(76): error C3867: 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>::length': non-standard syntax; use '&' to create a pointer to member (compiling source file src\ofApp.cpp)
+h:\of_v0.9.8_vs_release\apps\myapps\interactive architecture shared\src\QAdata.h(76): error C3867: 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>::length': non-standard syntax; use '&' to create a pointer to member (compiling source file src\main.cpp)
+h:\of_v0.9.8_vs_release\apps\myapps\interactive architecture shared\src\QAdata.h(80): error C3867: 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>::length': non-standard syntax; use '&' to create a pointer to member (compiling source file src\ofApp.cpp)
+h:\of_v0.9.8_vs_release\apps\myapps\interactive architecture shared\src\QAdata.h(80): error C3867: 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>::length': non-standard syntax; use '&' to create a pointer to member (compiling source file src\main.cpp)
+h:\of_v0.9.8_vs_release\apps\myapps\interactive architecture shared\src\QAdata.h(80): error C2296: '>': illegal, left operand has type 'unsigned int (__thiscall std::basic_string<char,std::char_traits<char>,std::allocator<char>>::* )(void) noexcept const' (compiling source file src\ofApp.cpp)
+h:\of_v0.9.8_vs_release\apps\myapps\interactive architecture shared\src\QAdata.h(80): error C2296: '>': illegal, left operand has type 'unsigned int (__thiscall std::basic_string<char,std::char_traits<char>,std::allocator<char>>::* )(void) noexcept const' (compiling source file src\main.cpp)
+h:\of_v0.9.8_vs_release\apps\myapps\interactive architecture shared\src\QAdata.h(80): error C2297: '>': illegal, right operand has type 'unsigned int (__thiscall std::basic_string<char,std::char_traits<char>,std::allocator<char>>::* )(void) noexcept const' (compiling source file src\ofApp.cpp)
+h:\of_v0.9.8_vs_release\apps\myapps\interactive architecture shared\src\QAdata.h(80): error C2297: '>': illegal, right operand has type 'unsigned int (__thiscall std::basic_string<char,std::char_traits<char>,std::allocator<char>>::* )(void) noexcept const' (compiling source file src\main.cpp)
+h:\of_v0.9.8_vs_release\apps\myapps\interactive architecture shared\src\QAdata.h(80): error C2440: 'initializing': cannot convert from 'unsigned int (__thiscall std::basic_string<char,std::char_traits<char>,std::allocator<char>>::* )(void) noexcept const' to 'double' (compiling source file src\ofApp.cpp)
+  h:\of_v0.9.8_vs_release\apps\myapps\interactive architecture shared\src\QAdata.h(80): note: There is no context in which this conversion is possible (compiling source file src\ofApp.cpp)
+h:\of_v0.9.8_vs_release\apps\myapps\interactive architecture shared\src\QAdata.h(80): error C2440: 'initializing': cannot convert from 'unsigned int (__thiscall std::basic_string<char,std::char_traits<char>,std::allocator<char>>::* )(void) noexcept const' to 'double' (compiling source file src\main.cpp)
+  h:\of_v0.9.8_vs_release\apps\myapps\interactive architecture shared\src\QAdata.h(80): note: There is no context in which this conversion is possible (compiling source file src\main.cpp)
+h:\of_v0.9.8_vs_release\apps\myapps\interactive architecture shared\src\QAdata.h(81): error C3867: 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>::length': non-standard syntax; use '&' to create a pointer to member (compiling source file src\ofApp.cpp)
+h:\of_v0.9.8_vs_release\apps\myapps\interactive architecture shared\src\QAdata.h(81): error C3867: 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>::length': non-standard syntax; use '&' to create a pointer to member (compiling source file src\main.cpp)
+h:\of_v0.9.8_vs_release\apps\myapps\interactive architecture shared\src\QAdata.h(81): error C2296: '<': illegal, left operand has type 'unsigned int (__thiscall std::basic_string<char,std::char_traits<char>,std::allocator<char>>::* )(void) noexcept const' (compiling source file src\ofApp.cpp)
+h:\of_v0.9.8_vs_release\apps\myapps\interactive architecture shared\src\QAdata.h(81): error C2296: '<': illegal, left operand has type 'unsigned int (__thiscall std::basic_string<char,std::char_traits<char>,std::allocator<char>>::* )(void) noexcept const' (compiling source file src\main.cpp)
+h:\of_v0.9.8_vs_release\apps\myapps\interactive architecture shared\src\QAdata.h(81): error C2297: '<': illegal, right operand has type 'unsigned int (__thiscall std::basic_string<char,std::char_traits<char>,std::allocator<char>>::* )(void) noexcept const' (compiling source file src\ofApp.cpp)
+h:\of_v0.9.8_vs_release\apps\myapps\interactive architecture shared\src\QAdata.h(81): error C2297: '<': illegal, right operand has type 'unsigned int (__thiscall std::basic_string<char,std::char_traits<char>,std::allocator<char>>::* )(void) noexcept const' (compiling source file src\main.cpp)
+h:\of_v0.9.8_vs_release\apps\myapps\interactive architecture shared\src\QAdata.h(81): error C2440: 'initializing': cannot convert from 'unsigned int (__thiscall std::basic_string<char,std::char_traits<char>,std::allocator<char>>::* )(void) noexcept const' to 'int' (compiling source file src\ofApp.cpp)
+  h:\of_v0.9.8_vs_release\apps\myapps\interactive architecture shared\src\QAdata.h(81): note: There is no context in which this conversion is possible (compiling source file src\ofApp.cpp)
+h:\of_v0.9.8_vs_release\apps\myapps\interactive architecture shared\src\QAdata.h(81): error C2440: 'initializing': cannot convert from 'unsigned int (__thiscall std::basic_string<char,std::char_traits<char>,std::allocator<char>>::* )(void) noexcept const' to 'int' (compiling source file src\main.cpp)
+  h:\of_v0.9.8_vs_release\apps\myapps\interactive architecture shared\src\QAdata.h(81): note: There is no context in which this conversion is possible (compiling source file src\main.cpp)
+h:\of_v0.9.8_vs_release\apps\myapps\interactive architecture shared\src\User.h(19): error C2065: 'len': undeclared identifier (compiling source file src\ofApp.cpp)
+h:\of_v0.9.8_vs_release\apps\myapps\interactive architecture shared\src\User.h(19): error C2065: 'len': undeclared identifier (compiling source file src\main.cpp)
+h:\of_v0.9.8_vs_release\apps\myapps\interactive architecture shared\src\User.h(65): error C2065: 'len': undeclared identifier (compiling source file src\main.cpp)
+h:\of_v0.9.8_vs_release\apps\myapps\interactive architecture shared\src\User.h(65): error C2065: 'len': undeclared identifier (compiling source file src\ofApp.cpp)
+h:\of_v0.9.8_vs_release\apps\myapps\interactive architecture shared\src\User.h(69): error C2065: 'index': undeclared identifier (compiling source file src\main.cpp)
+h:\of_v0.9.8_vs_release\apps\myapps\interactive architecture shared\src\User.h(69): error C2065: 'index': undeclared identifier (compiling source file src\ofApp.cpp)
+h:\of_v0.9.8_vs_release\apps\myapps\interactive architecture shared\src\User.h(69): error C2228: left of '.qa' must have class/struct/union (compiling source file src\main.cpp)
+h:\of_v0.9.8_vs_release\apps\myapps\interactive architecture shared\src\User.h(69): error C2228: left of '.qa' must have class/struct/union (compiling source file src\ofApp.cpp)
+h:\of_v0.9.8_vs_release\apps\myapps\interactive architecture shared\src\User.h(88): error C2065: 'len': undeclared identifier (compiling source file src\main.cpp)
+h:\of_v0.9.8_vs_release\apps\myapps\interactive architecture shared\src\User.h(88): warning C4806: '!=': unsafe operation: no value of type 'bool' promoted to type 'char' can equal the given constant (compiling source file src\main.cpp)
+h:\of_v0.9.8_vs_release\apps\myapps\interactive architecture shared\src\User.h(88): error C2065: 'len': undeclared identifier (compiling source file src\ofApp.cpp)
+h:\of_v0.9.8_vs_release\apps\myapps\interactive architecture shared\src\User.h(90): error C2065: 'flagqanumber': undeclared identifier (compiling source file src\main.cpp)
+h:\of_v0.9.8_vs_release\apps\myapps\interactive architecture shared\src\User.h(88): warning C4806: '!=': unsafe operation: no value of type 'bool' promoted to type 'char' can equal the given constant (compiling source file src\ofApp.cpp)
+h:\of_v0.9.8_vs_release\apps\myapps\interactive architecture shared\src\User.h(91): warning C4806: '!=': unsafe operation: no value of type 'bool' promoted to type 'char' can equal the given constant (compiling source file src\main.cpp)
+h:\of_v0.9.8_vs_release\apps\myapps\interactive architecture shared\src\User.h(90): error C2065: 'flagqanumber': undeclared identifier (compiling source file src\ofApp.cpp)
+h:\of_v0.9.8_vs_release\apps\myapps\interactive architecture shared\src\User.h(91): warning C4806: '!=': unsafe operation: no value of type 'bool' promoted to type 'char' can equal the given constant (compiling source file src\ofApp.cpp)
+h:\of_v0.9.8_vs_release\apps\myapps\interactive architecture shared\src\User.h(93): warning C4806: '!=': unsafe operation: no value of type 'bool' promoted to type 'char' can equal the given constant (compiling source file src\main.cpp)
+h:\of_v0.9.8_vs_release\apps\myapps\interactive architecture shared\src\User.h(93): warning C4806: '!=': unsafe operation: no value of type 'bool' promoted to type 'char' can equal the given constant (compiling source file src\ofApp.cpp)
+h:\of_v0.9.8_vs_release\apps\myapps\interactive architecture shared\src\User.h(95): warning C4806: '!=': unsafe operation: no value of type 'bool' promoted to type 'char' can equal the given constant (compiling source file src\main.cpp)
+h:\of_v0.9.8_vs_release\apps\myapps\interactive architecture shared\src\User.h(95): warning C4806: '!=': unsafe operation: no value of type 'bool' promoted to type 'char' can equal the given constant (compiling source file src\ofApp.cpp)
+h:\of_v0.9.8_vs_release\apps\myapps\interactive architecture shared\src\User.h(97): warning C4806: '!=': unsafe operation: no value of type 'bool' promoted to type 'char' can equal the given constant (compiling source file src\main.cpp)
+h:\of_v0.9.8_vs_release\apps\myapps\interactive architecture shared\src\User.h(97): warning C4806: '!=': unsafe operation: no value of type 'bool' promoted to type 'char' can equal the given constant (compiling source file src\ofApp.cpp)
+h:\of_v0.9.8_vs_release\apps\myapps\interactive architecture shared\src\ofApp.h(25): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int (compiling source file src\ofApp.cpp)
+h:\of_v0.9.8_vs_release\apps\myapps\interactive architecture shared\src\ofApp.h(25): error C2146: syntax error: missing ';' before identifier 'index' (compiling source file src\ofApp.cpp)
+h:\of_v0.9.8_vs_release\apps\myapps\interactive architecture shared\src\ofApp.h(25): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int (compiling source file src\main.cpp)
+h:\of_v0.9.8_vs_release\apps\myapps\interactive architecture shared\src\ofApp.h(25): error C2146: syntax error: missing ';' before identifier 'index' (compiling source file src\main.cpp)
+src\ofApp.cpp(172): error C2065: 'index': undeclared identifier
+src\ofApp.cpp(172): error C2228: left of '.qa' must have class/struct/union
+src\ofApp.cpp(173): error C2065: 'index': undeclared identifier
+src\ofApp.cpp(173): error C2228: left of '.qa' must have class/struct/union
+src\ofApp.cpp(174): error C2065: 'index': undeclared identifier
+src\ofApp.cpp(174): error C2228: left of '.qa' must have class/struct/union
+src\ofApp.cpp(175): error C2065: 'index': undeclared identifier
+src\ofApp.cpp(175): error C2228: left of '.qa' must have class/struct/union
+src\ofApp.cpp(176): error C2065: 'index': undeclared identifier
+src\ofApp.cpp(176): error C2228: left of '.qa' must have class/struct/union
+src\ofApp.cpp(178): error C2065: 'index': undeclared identifier
+src\ofApp.cpp(178): error C2228: left of '.qa' must have class/struct/union
+src\ofApp.cpp(179): error C2065: 'index': undeclared identifier
+src\ofApp.cpp(179): error C2228: left of '.qa' must have class/struct/union
+src\ofApp.cpp(180): error C2065: 'index': undeclared identifier
+src\ofApp.cpp(180): error C2228: left of '.qa' must have class/struct/union
+src\ofApp.cpp(181): error C2065: 'index': undeclared identifier
+src\ofApp.cpp(181): error C2228: left of '.qa' must have class/struct/union
+src\ofApp.cpp(182): error C2065: 'index': undeclared identifier
+src\ofApp.cpp(182): error C2228: left of '.qa' must have class/struct/union

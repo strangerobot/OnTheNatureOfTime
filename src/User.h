@@ -85,7 +85,7 @@ class User// holds the data of each user who interacts with the installation
 	void run()
 	{
 		cout << "Running_user_" << usernumber << endl;
-		for (int i = 0; i<len && ofGetKeyPressed() != 'e'; i++) //if e is pressed the program exits
+		for (int i = 0; i<len && (ofGetKeyPressed() != 'e') ; i++) //if e is pressed the program exits
 		{	
 			flagqanumber = i; //sends question number to the voice recognition code
 			while (ofGetKeyPressed() != 'c') { cout << "getquestion" << endl; };

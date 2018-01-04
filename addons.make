@@ -1,3 +1,2 @@
-ofxCv
 ofxLibwebsockets
 ofxVideoRecorder

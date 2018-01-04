@@ -1,6 +1,6 @@
 #pragma once
 #include "ofMain.h"
-#include "ofapp.h"
+#include "ofApp.h"
 #define DELAY 1000.0
 
 class QAdata
@@ -77,8 +77,8 @@ public:
 			{
 				return 0;
 			}
-			double maxLen = a.length > b.length ? a.length : b.length;
-			int minLen = a.length < b.length ? a.length : b.length;
+			double maxLen = a.length() > b.length() ? a.length() : b.length();
+			int minLen = a.length() < b.length() ? a.length() : b.length();
 			int sameCharAtIndex = 0;
 			for (int i = 0; i < minLen; i++) //Compare char by char
 			{

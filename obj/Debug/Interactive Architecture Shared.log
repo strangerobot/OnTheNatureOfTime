@@ -1,0 +1,95 @@
+﻿C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Microsoft.CppBuild.targets(392,5): warning MSB8028: The intermediate directory (obj\Debug\) contains files shared from another project (INTERACTIVE ARCHITECTURE.vcxproj).  This can lead to incorrect clean and rebuild behavior.
+  main.cpp
+  ofApp.cpp
+h:\of_v0.9.8_vs_release\apps\myapps\interactive architecture shared\src\QAdata.h(22): error C2065: 'flagquestion': undeclared identifier (compiling source file src\main.cpp)
+h:\of_v0.9.8_vs_release\apps\myapps\interactive architecture shared\src\QAdata.h(40): error C2065: 'bRecording': undeclared identifier (compiling source file src\main.cpp)
+h:\of_v0.9.8_vs_release\apps\myapps\interactive architecture shared\src\QAdata.h(41): error C2065: 'bRecording': undeclared identifier (compiling source file src\main.cpp)
+h:\of_v0.9.8_vs_release\apps\myapps\interactive architecture shared\src\QAdata.h(41): error C2065: 'vidRecorder': undeclared identifier (compiling source file src\main.cpp)
+h:\of_v0.9.8_vs_release\apps\myapps\interactive architecture shared\src\QAdata.h(41): error C2228: left of '.isInitialized' must have class/struct/union (compiling source file src\main.cpp)
+  h:\of_v0.9.8_vs_release\apps\myapps\interactive architecture shared\src\QAdata.h(41): note: type is 'unknown-type' (compiling source file src\main.cpp)
+h:\of_v0.9.8_vs_release\apps\myapps\interactive architecture shared\src\QAdata.h(42): error C2065: 'vidRecorder': undeclared identifier (compiling source file src\main.cpp)
+h:\of_v0.9.8_vs_release\apps\myapps\interactive architecture shared\src\QAdata.h(42): error C2228: left of '.setup' must have class/struct/union (compiling source file src\main.cpp)
+  h:\of_v0.9.8_vs_release\apps\myapps\interactive architecture shared\src\QAdata.h(42): note: type is 'unknown-type' (compiling source file src\main.cpp)
+h:\of_v0.9.8_vs_release\apps\myapps\interactive architecture shared\src\QAdata.h(42): error C2065: 'vidGrabber': undeclared identifier (compiling source file src\main.cpp)
+h:\of_v0.9.8_vs_release\apps\myapps\interactive architecture shared\src\QAdata.h(42): error C2228: left of '.getWidth' must have class/struct/union (compiling source file src\main.cpp)
+  h:\of_v0.9.8_vs_release\apps\myapps\interactive architecture shared\src\QAdata.h(42): note: type is 'unknown-type' (compiling source file src\main.cpp)
+h:\of_v0.9.8_vs_release\apps\myapps\interactive architecture shared\src\QAdata.h(42): error C2228: left of '.getHeight' must have class/struct/union (compiling source file src\main.cpp)
+  h:\of_v0.9.8_vs_release\apps\myapps\interactive architecture shared\src\QAdata.h(42): note: type is 'unknown-type' (compiling source file src\main.cpp)
+h:\of_v0.9.8_vs_release\apps\myapps\interactive architecture shared\src\QAdata.h(42): error C2065: 'sampleRate': undeclared identifier (compiling source file src\main.cpp)
+h:\of_v0.9.8_vs_release\apps\myapps\interactive architecture shared\src\QAdata.h(42): error C2065: 'channels': undeclared identifier (compiling source file src\main.cpp)
+h:\of_v0.9.8_vs_release\apps\myapps\interactive architecture shared\src\QAdata.h(49): error C2065: 'bRecording': undeclared identifier (compiling source file src\main.cpp)
+h:\of_v0.9.8_vs_release\apps\myapps\interactive architecture shared\src\QAdata.h(50): error C2065: 'vidRecorder': undeclared identifier (compiling source file src\main.cpp)
+h:\of_v0.9.8_vs_release\apps\myapps\interactive architecture shared\src\QAdata.h(50): error C2228: left of '.close' must have class/struct/union (compiling source file src\main.cpp)
+  h:\of_v0.9.8_vs_release\apps\myapps\interactive architecture shared\src\QAdata.h(50): note: type is 'unknown-type' (compiling source file src\main.cpp)
+h:\of_v0.9.8_vs_release\apps\myapps\interactive architecture shared\src\QAdata.h(61): error C2065: 'tolerance': undeclared identifier (compiling source file src\main.cpp)
+h:\of_v0.9.8_vs_release\apps\myapps\interactive architecture shared\src\QAdata.h(64): error C2065: 'flagquestion': undeclared identifier (compiling source file src\main.cpp)
+h:\of_v0.9.8_vs_release\apps\myapps\interactive architecture shared\src\QAdata.h(76): error C3867: 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>::length': non-standard syntax; use '&' to create a pointer to member (compiling source file src\main.cpp)
+h:\of_v0.9.8_vs_release\apps\myapps\interactive architecture shared\src\User.h(19): error C2065: 'len': undeclared identifier (compiling source file src\main.cpp)
+h:\of_v0.9.8_vs_release\apps\myapps\interactive architecture shared\src\QAdata.h(22): error C2065: 'flagquestion': undeclared identifier (compiling source file src\ofApp.cpp)
+h:\of_v0.9.8_vs_release\apps\myapps\interactive architecture shared\src\User.h(65): error C2065: 'len': undeclared identifier (compiling source file src\main.cpp)
+h:\of_v0.9.8_vs_release\apps\myapps\interactive architecture shared\src\User.h(69): error C2065: 'index': undeclared identifier (compiling source file src\main.cpp)
+h:\of_v0.9.8_vs_release\apps\myapps\interactive architecture shared\src\User.h(69): error C2228: left of '.qa' must have class/struct/union (compiling source file src\main.cpp)
+h:\of_v0.9.8_vs_release\apps\myapps\interactive architecture shared\src\User.h(88): error C2065: 'len': undeclared identifier (compiling source file src\main.cpp)
+h:\of_v0.9.8_vs_release\apps\myapps\interactive architecture shared\src\User.h(88): warning C4806: '!=': unsafe operation: no value of type 'bool' promoted to type 'char' can equal the given constant (compiling source file src\main.cpp)
+h:\of_v0.9.8_vs_release\apps\myapps\interactive architecture shared\src\User.h(90): error C2065: 'flagqanumber': undeclared identifier (compiling source file src\main.cpp)
+h:\of_v0.9.8_vs_release\apps\myapps\interactive architecture shared\src\User.h(91): warning C4806: '!=': unsafe operation: no value of type 'bool' promoted to type 'char' can equal the given constant (compiling source file src\main.cpp)
+h:\of_v0.9.8_vs_release\apps\myapps\interactive architecture shared\src\User.h(93): warning C4806: '!=': unsafe operation: no value of type 'bool' promoted to type 'char' can equal the given constant (compiling source file src\main.cpp)
+h:\of_v0.9.8_vs_release\apps\myapps\interactive architecture shared\src\User.h(95): warning C4806: '!=': unsafe operation: no value of type 'bool' promoted to type 'char' can equal the given constant (compiling source file src\main.cpp)
+h:\of_v0.9.8_vs_release\apps\myapps\interactive architecture shared\src\User.h(97): warning C4806: '!=': unsafe operation: no value of type 'bool' promoted to type 'char' can equal the given constant (compiling source file src\main.cpp)
+h:\of_v0.9.8_vs_release\apps\myapps\interactive architecture shared\src\QAdata.h(40): error C2065: 'bRecording': undeclared identifier (compiling source file src\ofApp.cpp)
+h:\of_v0.9.8_vs_release\apps\myapps\interactive architecture shared\src\QAdata.h(41): error C2065: 'bRecording': undeclared identifier (compiling source file src\ofApp.cpp)
+h:\of_v0.9.8_vs_release\apps\myapps\interactive architecture shared\src\QAdata.h(41): error C2065: 'vidRecorder': undeclared identifier (compiling source file src\ofApp.cpp)
+h:\of_v0.9.8_vs_release\apps\myapps\interactive architecture shared\src\QAdata.h(41): error C2228: left of '.isInitialized' must have class/struct/union (compiling source file src\ofApp.cpp)
+  h:\of_v0.9.8_vs_release\apps\myapps\interactive architecture shared\src\QAdata.h(41): note: type is 'unknown-type' (compiling source file src\ofApp.cpp)
+h:\of_v0.9.8_vs_release\apps\myapps\interactive architecture shared\src\QAdata.h(42): error C2065: 'vidRecorder': undeclared identifier (compiling source file src\ofApp.cpp)
+h:\of_v0.9.8_vs_release\apps\myapps\interactive architecture shared\src\QAdata.h(42): error C2228: left of '.setup' must have class/struct/union (compiling source file src\ofApp.cpp)
+  h:\of_v0.9.8_vs_release\apps\myapps\interactive architecture shared\src\QAdata.h(42): note: type is 'unknown-type' (compiling source file src\ofApp.cpp)
+h:\of_v0.9.8_vs_release\apps\myapps\interactive architecture shared\src\QAdata.h(42): error C2065: 'vidGrabber': undeclared identifier (compiling source file src\ofApp.cpp)
+h:\of_v0.9.8_vs_release\apps\myapps\interactive architecture shared\src\QAdata.h(42): error C2228: left of '.getWidth' must have class/struct/union (compiling source file src\ofApp.cpp)
+  h:\of_v0.9.8_vs_release\apps\myapps\interactive architecture shared\src\QAdata.h(42): note: type is 'unknown-type' (compiling source file src\ofApp.cpp)
+h:\of_v0.9.8_vs_release\apps\myapps\interactive architecture shared\src\QAdata.h(42): error C2228: left of '.getHeight' must have class/struct/union (compiling source file src\ofApp.cpp)
+  h:\of_v0.9.8_vs_release\apps\myapps\interactive architecture shared\src\QAdata.h(42): note: type is 'unknown-type' (compiling source file src\ofApp.cpp)
+h:\of_v0.9.8_vs_release\apps\myapps\interactive architecture shared\src\QAdata.h(42): error C2065: 'sampleRate': undeclared identifier (compiling source file src\ofApp.cpp)
+h:\of_v0.9.8_vs_release\apps\myapps\interactive architecture shared\src\QAdata.h(42): error C2065: 'channels': undeclared identifier (compiling source file src\ofApp.cpp)
+h:\of_v0.9.8_vs_release\apps\myapps\interactive architecture shared\src\QAdata.h(49): error C2065: 'bRecording': undeclared identifier (compiling source file src\ofApp.cpp)
+h:\of_v0.9.8_vs_release\apps\myapps\interactive architecture shared\src\QAdata.h(50): error C2065: 'vidRecorder': undeclared identifier (compiling source file src\ofApp.cpp)
+h:\of_v0.9.8_vs_release\apps\myapps\interactive architecture shared\src\QAdata.h(50): error C2228: left of '.close' must have class/struct/union (compiling source file src\ofApp.cpp)
+  h:\of_v0.9.8_vs_release\apps\myapps\interactive architecture shared\src\QAdata.h(50): note: type is 'unknown-type' (compiling source file src\ofApp.cpp)
+h:\of_v0.9.8_vs_release\apps\myapps\interactive architecture shared\src\QAdata.h(61): error C2065: 'tolerance': undeclared identifier (compiling source file src\ofApp.cpp)
+h:\of_v0.9.8_vs_release\apps\myapps\interactive architecture shared\src\QAdata.h(64): error C2065: 'flagquestion': undeclared identifier (compiling source file src\ofApp.cpp)
+h:\of_v0.9.8_vs_release\apps\myapps\interactive architecture shared\src\QAdata.h(76): error C3867: 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>::length': non-standard syntax; use '&' to create a pointer to member (compiling source file src\ofApp.cpp)
+h:\of_v0.9.8_vs_release\apps\myapps\interactive architecture shared\src\User.h(19): error C2065: 'len': undeclared identifier (compiling source file src\ofApp.cpp)
+h:\of_v0.9.8_vs_release\apps\myapps\interactive architecture shared\src\User.h(65): error C2065: 'len': undeclared identifier (compiling source file src\ofApp.cpp)
+h:\of_v0.9.8_vs_release\apps\myapps\interactive architecture shared\src\User.h(69): error C2065: 'index': undeclared identifier (compiling source file src\ofApp.cpp)
+h:\of_v0.9.8_vs_release\apps\myapps\interactive architecture shared\src\User.h(69): error C2228: left of '.qa' must have class/struct/union (compiling source file src\ofApp.cpp)
+h:\of_v0.9.8_vs_release\apps\myapps\interactive architecture shared\src\User.h(88): error C2065: 'len': undeclared identifier (compiling source file src\ofApp.cpp)
+h:\of_v0.9.8_vs_release\apps\myapps\interactive architecture shared\src\User.h(88): warning C4806: '!=': unsafe operation: no value of type 'bool' promoted to type 'char' can equal the given constant (compiling source file src\ofApp.cpp)
+h:\of_v0.9.8_vs_release\apps\myapps\interactive architecture shared\src\User.h(90): error C2065: 'flagqanumber': undeclared identifier (compiling source file src\ofApp.cpp)
+h:\of_v0.9.8_vs_release\apps\myapps\interactive architecture shared\src\User.h(91): warning C4806: '!=': unsafe operation: no value of type 'bool' promoted to type 'char' can equal the given constant (compiling source file src\ofApp.cpp)
+h:\of_v0.9.8_vs_release\apps\myapps\interactive architecture shared\src\User.h(93): warning C4806: '!=': unsafe operation: no value of type 'bool' promoted to type 'char' can equal the given constant (compiling source file src\ofApp.cpp)
+h:\of_v0.9.8_vs_release\apps\myapps\interactive architecture shared\src\User.h(95): warning C4806: '!=': unsafe operation: no value of type 'bool' promoted to type 'char' can equal the given constant (compiling source file src\ofApp.cpp)
+h:\of_v0.9.8_vs_release\apps\myapps\interactive architecture shared\src\User.h(97): warning C4806: '!=': unsafe operation: no value of type 'bool' promoted to type 'char' can equal the given constant (compiling source file src\ofApp.cpp)
+h:\of_v0.9.8_vs_release\apps\myapps\interactive architecture shared\src\ofApp.h(25): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int (compiling source file src\main.cpp)
+h:\of_v0.9.8_vs_release\apps\myapps\interactive architecture shared\src\ofApp.h(25): error C2146: syntax error: missing ';' before identifier 'index' (compiling source file src\main.cpp)
+h:\of_v0.9.8_vs_release\apps\myapps\interactive architecture shared\src\ofApp.h(25): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int (compiling source file src\ofApp.cpp)
+h:\of_v0.9.8_vs_release\apps\myapps\interactive architecture shared\src\ofApp.h(25): error C2146: syntax error: missing ';' before identifier 'index' (compiling source file src\ofApp.cpp)
+src\ofApp.cpp(172): error C2065: 'index': undeclared identifier
+src\ofApp.cpp(172): error C2228: left of '.qa' must have class/struct/union
+src\ofApp.cpp(173): error C2065: 'index': undeclared identifier
+src\ofApp.cpp(173): error C2228: left of '.qa' must have class/struct/union
+src\ofApp.cpp(174): error C2065: 'index': undeclared identifier
+src\ofApp.cpp(174): error C2228: left of '.qa' must have class/struct/union
+src\ofApp.cpp(175): error C2065: 'index': undeclared identifier
+src\ofApp.cpp(175): error C2228: left of '.qa' must have class/struct/union
+src\ofApp.cpp(176): error C2065: 'index': undeclared identifier
+src\ofApp.cpp(176): error C2228: left of '.qa' must have class/struct/union
+src\ofApp.cpp(178): error C2065: 'index': undeclared identifier
+src\ofApp.cpp(178): error C2228: left of '.qa' must have class/struct/union
+src\ofApp.cpp(179): error C2065: 'index': undeclared identifier
+src\ofApp.cpp(179): error C2228: left of '.qa' must have class/struct/union
+src\ofApp.cpp(180): error C2065: 'index': undeclared identifier
+src\ofApp.cpp(180): error C2228: left of '.qa' must have class/struct/union
+src\ofApp.cpp(181): error C2065: 'index': undeclared identifier
+src\ofApp.cpp(181): error C2228: left of '.qa' must have class/struct/union
+src\ofApp.cpp(182): error C2065: 'index': undeclared identifier
+src\ofApp.cpp(182): error C2228: left of '.qa' must have class/struct/union

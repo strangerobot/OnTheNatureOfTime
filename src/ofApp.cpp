@@ -47,7 +47,7 @@ void ofApp::setup(){
 	User sample; //follow below
 	//loadthe sample user
 
-	temp.Switch(sample, usercount );
+	current.Switch(sample, usercount );
 	usercount++;
 }
 
@@ -72,10 +72,11 @@ void ofApp::audioIn(float *input, int bufferSize, int nChannels) {
 //--------------------------------------------------------------
 void ofApp::draw(){
 
-	User current = temp;
+	
 	current.run();
 	usercount++;
-	temp.Switch(current, usercount);
+	User temp = current;
+	current.Switch(temp, usercount);
 
 }
 
@@ -162,22 +163,22 @@ void ofApp::onIdle(ofxLibwebsockets::Event& args) {
 void ofApp::onMessage(ofxLibwebsockets::Event& args) {
 	cout << "message " << args.message << endl;
 	if(flagquestion==1)
-	_currentuser.askquestion[flagqanumber].checkverify(args.message); //runs the verification function in the current users current askquestion
+	current.askquestion[flagqanumber].checkverify(args.message); //runs the verification function in the current users current askquestion
 }
 
 
 void ofApp::intialiseindex() {
 
-	index[0].qa[0] = "";
-	index[0].qa[1] = "";
-	index[0].qa[2] = "";
-	index[0].qa[3] = "";
-	index[0].qa[4] = "";
+	index[0].qa[0] = "apple";
+	index[0].qa[1] = "ball";
+	index[0].qa[2] = "cat";
+	index[0].qa[3] = "dog";
+	index[0].qa[4] = "elephant";
 
-	index[1].qa[0] = "";
-	index[1].qa[1] = "";
-	index[1].qa[2] = "";
-	index[1].qa[3] = "";
-	index[1].qa[4] = "";
+	index[1].qa[0] = "fat";
+	index[1].qa[1] = "goat";
+	index[1].qa[2] = "high";
+	index[1].qa[3] = "jack";
+	index[1].qa[4] = "kidney";
 
 }
