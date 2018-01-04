@@ -9,13 +9,30 @@
 #include "ofxLibwebsockets.h"
 #define NUM_MESSAGES 30
 
-
-
-//below class definition for qa index
 class Index {
 public:
 	string qa[5];
 };
+
+
+const int len = 1;
+int flagquestion = 0,flagqanumber=0; //global flag which is used to see if it needs to listen to the incoming stream of voice // flag for QA number to be used for veryfying the question asked
+float tolerance = 90.0; //tolerance for voice recognition
+
+//below_parameters for video recording
+bool bRecording=false; //checks if recording is on or not
+int sampleRate=44100;
+int channels=2;
+ofVideoGrabber   vidGrabber;
+ofxVideoRecorder  vidRecorder;
+ofSoundStream      soundStream;
+ofFbo recordFbo;
+ofPixels recordPixels;
+
+Index index[2];
+
+
+//below class definition for qa index
 
 class ofApp : public ofBaseApp{
 
@@ -54,24 +71,8 @@ class ofApp : public ofBaseApp{
 		//recorder//
 		void audioIn(float * input, int bufferSize, int nChannels);
 
-		//these were global variable earlier
-
 		int usercount = 1; //keeps track of the user number in draw
 
-		const int len = 1;
-		int flagquestion = 0, flagqanumber = 0; //global flag which is used to see if it needs to listen to the incoming stream of voice // flag for QA number to be used for veryfying the question asked
-		float tolerance = 90.0; //tolerance for voice recognition
-
-								//below_parameters for video recording
-		bool bRecording = false; //checks if recording is on or not
-		int sampleRate = 44100;
-		int channels = 2;
-		ofVideoGrabber      vidGrabber;
-		ofxVideoRecorder    vidRecorder;
-		ofSoundStream       soundStream;
-		ofFbo recordFbo;
-		ofPixels recordPixels;
-		Index index[2];
 
 
 		////////////dontknowhowtoimplementityet

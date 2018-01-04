@@ -1,7 +1,16 @@
 #pragma once
 #include "ofMain.h"
 #include "ofApp.h"
+#include "ofxVideoRecorder.h"
+
 #define DELAY 1000.0
+
+extern bool bRecording;
+extern int channels,flagqanumber,flagquestion,sampleRate;
+extern const int len;
+extern float tolerance;
+ofVideoGrabber extern vidGrabber;
+ofxVideoRecorder extern vidRecorder;
 
 class QAdata
 {
@@ -15,6 +24,7 @@ public:
 		string text = " "; //Collects the on screen text
 		string path;//path of file
 		string ext=".mp4";
+
 		
 
 		void record()// function that triggers recording
@@ -73,7 +83,7 @@ public:
 		{
 			if (a == b) //Same string, no iteration needed.
 				return 100;
-			if ((a.length == 0) || (b.length == 0)) //One is empty, second is not
+			if ((a.length() == 0) || (b.length() == 0)) //One is empty, second is not
 			{
 				return 0;
 			}
