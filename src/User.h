@@ -5,6 +5,8 @@
 //index is an object with two lists of question
 //write a code for path allocation
 
+
+
 class User// holds the data of each user who interacts with the installation
 	{
 		//questionask Questions to be asked to the user  //from earlier user                            question/ recorded/verified /(index a)/1,1

@@ -3,9 +3,13 @@
 //--------------------------------------------------------------
 void ofApp::setup(){
 
+	intialiseindex(); //setup the two question sets
+
+
 	// setup a server with default options on port 9092
 	// - pass in true after port to set up with SSL
 	//bSetup = server.setup( 9093 );
+	
 
 	ofxLibwebsockets::ServerOptions options = ofxLibwebsockets::defaultServerOptions();
 	options.port = 9092;
@@ -147,5 +151,22 @@ void ofApp::onIdle(ofxLibwebsockets::Event& args) {
 void ofApp::onMessage(ofxLibwebsockets::Event& args) {
 	cout << "message " << args.message << endl;
 	if(flagquestion==1)
-	currentuser.askquestion[flagqanumber].checkverify(args.message); //runs the verification function in the current users current askquestion
+	_currentuser.askquestion[flagqanumber].checkverify(args.message); //runs the verification function in the current users current askquestion
+}
+
+
+void ofApp::intialiseindex() {
+
+	index[0].qa[0] = "";
+	index[0].qa[1] = "";
+	index[0].qa[2] = "";
+	index[0].qa[3] = "";
+	index[0].qa[4] = "";
+
+	index[1].qa[0] = "";
+	index[1].qa[1] = "";
+	index[1].qa[2] = "";
+	index[1].qa[3] = "";
+	index[1].qa[4] = "";
+
 }

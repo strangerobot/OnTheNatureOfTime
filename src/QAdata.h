@@ -1,6 +1,7 @@
 #pragma once
 #include "ofMain.h"
 #include "ofapp.h"
+#define DELAY 1000.0
 
 class QAdata
 {
@@ -12,7 +13,8 @@ public:
 
 		int verification; //Checks wether the file is verified or not
 		string text = " "; //Collects the on screen text
-		string path; //path of file
+		string path;//path of file
+		string ext=".mp4";
 		
 
 		void record()// function that triggers recording
@@ -23,11 +25,11 @@ public:
 				cout << "Press the button to record"<<endl; //replace with gui part
 				//listen for arduino button press//or normal button press
 				startrecording();
-				ofSleepMillis(_insert_number);
+				ofSleepMillis(DELAY);
 				stoprecording();
 				if (verification != 1)
 					cout << "wrong question, try again" << endl;
-				ofSleepMillis(_insert_number); //delay
+				ofSleepMillis(DELAY); //delay
 
 				}
 
@@ -37,7 +39,7 @@ public:
 		{
 			bRecording = !bRecording;
 			if (bRecording && !vidRecorder.isInitialized()) {
-				vidRecorder.setup(fileName + ofGetTimestampString() + fileExt, vidGrabber.getWidth(), vidGrabber.getHeight(), 30, sampleRate, channels);
+				vidRecorder.setup(path + ofGetTimestampString() + ext, vidGrabber.getWidth(), vidGrabber.getHeight(), 30, sampleRate, channels);
 
 			}
 		}
