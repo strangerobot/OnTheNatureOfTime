@@ -50,7 +50,7 @@ class ofApp : public ofBaseApp{
 		void gotMessage(ofMessage msg);
 		void intialiseindex();
 
-		User temp;
+	
 		
 		ofxLibwebsockets::Server server;
 
@@ -64,9 +64,14 @@ class ofApp : public ofBaseApp{
 		void onIdle(ofxLibwebsockets::Event& args);
 		void onMessage(ofxLibwebsockets::Event& args);
 		void onBroadcast(ofxLibwebsockets::Event& args);
-
 		//recorder//
 		void audioIn(float * input, int bufferSize, int nChannels);
 
+		int usercount = 1; //keeps track of the user number in draw
+
+
+
+		////////////dontknowhowtoimplementityet
+		User temp;
 
 };

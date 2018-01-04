@@ -54,7 +54,7 @@ class User// holds the data of each user who interacts with the installation
 */
 
 	//<below> copies data from previous user and intializes question and paths for the new user
-	User(User &temp, int number) //constructor to switch to temp
+	void Switch(User &temp, int number) //constructor to switch to temp
 		{
 			usernumber = number;
 		
@@ -66,7 +66,7 @@ class User// holds the data of each user who interacts with the installation
 			{
 				questionask[i] = temp.askquestion[i];
 				answergive[i] = temp.giveanswer[i];
-				askquestion[i].text = index[i];//wait for definition of index
+				askquestion[i].text = index[type].qa[i];//intialises question of type from the index
 				askquestion[i].path = ofToString(usernumber) + "_askquestion.mp4";// write code here for path allocation
 				giveanswer[i].verification = 1;
 				giveanswer[i].path = ofToString(usernumber) + "_giveanswer.mp4";// write code here for path allocation

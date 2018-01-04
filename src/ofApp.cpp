@@ -43,6 +43,12 @@ void ofApp::setup(){
 	bRecording = false;
 	ofEnableAlphaBlending();
 
+
+	User sample; //follow below
+	//loadthe sample user
+
+	temp.Switch(sample, usercount );
+	usercount++;
 }
 
 //--------------------------------------------------------------
@@ -65,6 +71,11 @@ void ofApp::audioIn(float *input, int bufferSize, int nChannels) {
 
 //--------------------------------------------------------------
 void ofApp::draw(){
+
+	User current = temp;
+	current.run();
+	usercount++;
+	temp.Switch(current, usercount);
 
 }
 
