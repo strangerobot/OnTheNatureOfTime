@@ -7,7 +7,7 @@
 
 extern bool bRecording;
 extern int channels,flagqanumber,flagquestion,sampleRate;
-extern const int len;
+const int extern len;
 extern float tolerance;
 ofVideoGrabber extern vidGrabber;
 ofxVideoRecorder extern vidRecorder;

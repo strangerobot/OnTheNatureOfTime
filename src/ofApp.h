@@ -15,7 +15,7 @@ public:
 };
 
 
-const int len = 1;
+const int len = 5;
 int flagquestion = 0,flagqanumber=0; //global flag which is used to see if it needs to listen to the incoming stream of voice // flag for QA number to be used for veryfying the question asked
 float tolerance = 90.0; //tolerance for voice recognition
 
