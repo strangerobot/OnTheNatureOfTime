@@ -3,24 +3,15 @@
   ofApp.cpp
 h:\of_v0.9.8_vs_release\apps\myapps\interactive architecture shared\src\User.h(70): error C2065: 'index': undeclared identifier (compiling source file src\main.cpp)
 h:\of_v0.9.8_vs_release\apps\myapps\interactive architecture shared\src\User.h(70): error C2228: left of '.qa' must have class/struct/union (compiling source file src\main.cpp)
-h:\of_v0.9.8_vs_release\apps\myapps\interactive architecture shared\src\User.h(70): error C2065: 'index': undeclared identifier (compiling source file src\ofApp.cpp)
-h:\of_v0.9.8_vs_release\apps\myapps\interactive architecture shared\src\User.h(70): error C2228: left of '.qa' must have class/struct/union (compiling source file src\ofApp.cpp)
 h:\of_v0.9.8_vs_release\apps\myapps\interactive architecture shared\src\User.h(89): warning C4806: '!=': unsafe operation: no value of type 'bool' promoted to type 'char' can equal the given constant (compiling source file src\main.cpp)
 h:\of_v0.9.8_vs_release\apps\myapps\interactive architecture shared\src\User.h(92): warning C4806: '!=': unsafe operation: no value of type 'bool' promoted to type 'char' can equal the given constant (compiling source file src\main.cpp)
 h:\of_v0.9.8_vs_release\apps\myapps\interactive architecture shared\src\User.h(94): warning C4806: '!=': unsafe operation: no value of type 'bool' promoted to type 'char' can equal the given constant (compiling source file src\main.cpp)
-h:\of_v0.9.8_vs_release\apps\myapps\interactive architecture shared\src\User.h(89): warning C4806: '!=': unsafe operation: no value of type 'bool' promoted to type 'char' can equal the given constant (compiling source file src\ofApp.cpp)
 h:\of_v0.9.8_vs_release\apps\myapps\interactive architecture shared\src\User.h(96): warning C4806: '!=': unsafe operation: no value of type 'bool' promoted to type 'char' can equal the given constant (compiling source file src\main.cpp)
-h:\of_v0.9.8_vs_release\apps\myapps\interactive architecture shared\src\User.h(92): warning C4806: '!=': unsafe operation: no value of type 'bool' promoted to type 'char' can equal the given constant (compiling source file src\ofApp.cpp)
 h:\of_v0.9.8_vs_release\apps\myapps\interactive architecture shared\src\User.h(98): warning C4806: '!=': unsafe operation: no value of type 'bool' promoted to type 'char' can equal the given constant (compiling source file src\main.cpp)
+h:\of_v0.9.8_vs_release\apps\myapps\interactive architecture shared\src\User.h(70): error C2065: 'index': undeclared identifier (compiling source file src\ofApp.cpp)
+h:\of_v0.9.8_vs_release\apps\myapps\interactive architecture shared\src\User.h(70): error C2228: left of '.qa' must have class/struct/union (compiling source file src\ofApp.cpp)
+h:\of_v0.9.8_vs_release\apps\myapps\interactive architecture shared\src\User.h(89): warning C4806: '!=': unsafe operation: no value of type 'bool' promoted to type 'char' can equal the given constant (compiling source file src\ofApp.cpp)
+h:\of_v0.9.8_vs_release\apps\myapps\interactive architecture shared\src\User.h(92): warning C4806: '!=': unsafe operation: no value of type 'bool' promoted to type 'char' can equal the given constant (compiling source file src\ofApp.cpp)
 h:\of_v0.9.8_vs_release\apps\myapps\interactive architecture shared\src\User.h(94): warning C4806: '!=': unsafe operation: no value of type 'bool' promoted to type 'char' can equal the given constant (compiling source file src\ofApp.cpp)
 h:\of_v0.9.8_vs_release\apps\myapps\interactive architecture shared\src\User.h(96): warning C4806: '!=': unsafe operation: no value of type 'bool' promoted to type 'char' can equal the given constant (compiling source file src\ofApp.cpp)
 h:\of_v0.9.8_vs_release\apps\myapps\interactive architecture shared\src\User.h(98): warning C4806: '!=': unsafe operation: no value of type 'bool' promoted to type 'char' can equal the given constant (compiling source file src\ofApp.cpp)
-h:\of_v0.9.8_vs_release\apps\myapps\interactive architecture shared\src\ofApp.h(18): error C2370: 'len': redefinition; different storage class (compiling source file src\main.cpp)
-  h:\of_v0.9.8_vs_release\apps\myapps\interactive architecture shared\src\User.h(9): note: see declaration of 'len' (compiling source file src\main.cpp)
-h:\of_v0.9.8_vs_release\apps\myapps\interactive architecture shared\src\ofApp.h(18): error C2370: 'len': redefinition; different storage class (compiling source file src\ofApp.cpp)
-  h:\of_v0.9.8_vs_release\apps\myapps\interactive architecture shared\src\User.h(9): note: see declaration of 'len' (compiling source file src\ofApp.cpp)
-src\ofApp.cpp(10): error C2059: syntax error: '['
-src\ofApp.cpp(12): error C2228: left of '.intialiseindex' must have class/struct/union
-  src\ofApp.cpp(12): note: type is 'Index [2]'
-src\ofApp.cpp(20): error C2228: left of '.ServerOptions' must have class/struct/union
-src\ofApp.cpp(20): error C2228: left of '.defaultServerOptions' must have class/struct/union

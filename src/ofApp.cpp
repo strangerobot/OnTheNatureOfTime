@@ -2,12 +2,13 @@
 
  ofVideoGrabber extern vidGrabber;
 //extern ofxVideoRecorder  vidRecorder;
- Index extern index[];
+ 
+ Index index[2];
 
 //--------------------------------------------------------------
 void ofApp::setup(){
 
-	index.[0] = new Index();
+	//index[0] = new Index();
 
 	intialiseindex(); //setup the two question sets
 

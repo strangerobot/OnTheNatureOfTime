@@ -2,11 +2,11 @@
 #include "QAdata.h"
 #include "ofApp.h"
 
+
 //1st user Intialiser will be tackled in a different code
 //index is an object with two lists of question
 //write a code for path allocation
 
-const int len = 5;
 
 class User// holds the data of each user who interacts with the installation
 	{
@@ -17,7 +17,7 @@ class User// holds the data of each user who interacts with the installation
 	public:
 
 		int type,usernumber; //question index 0=a, 1=b; //count is the user number for file saving purposes
-		QAdata questionask[len], giveanswer[len], askquestion[len], answergive[len]; //_Debug phase _ using number instead of variable
+		QAdata questionask[5], giveanswer[5], askquestion[5], answergive[5]; //_Debug phase _ using number instead of variable
 
 		//constructors
 

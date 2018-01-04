@@ -29,7 +29,7 @@ ofSoundStream      soundStream;
 ofFbo recordFbo;
 ofPixels recordPixels;
 
-Index index[2];
+
 
 
 //below class definition for qa index
