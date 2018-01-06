@@ -19,11 +19,7 @@ void ofApp::setup(){
 
 	setupsample();
 
-	// setup a server with default options on port 9092
-	// - pass in true after port to set up with SSL
-	//bSetup = server.setup( 9093 );
 	
-
 	ofxLibwebsockets::ServerOptions options = ofxLibwebsockets::defaultServerOptions();
 	options.port = 9092;
 	options.bUseSSL = false; // you'll have to manually accept this self-signed cert if 'true'!
@@ -38,7 +34,7 @@ void ofApp::setup(){
 	channels = 2;
 
 	ofSetFrameRate(60);
-	ofSetLogLevel(OF_LOG_VERBOSE);
+	//ofSetLogLevel(OF_LOG_VERBOSE);
 	vidGrabber.setDesiredFrameRate(30);
 	vidGrabber.initGrabber(640, 480);
 #ifdef TARGET_WIN32
@@ -97,11 +93,14 @@ void ofApp::audioIn(float *input, int bufferSize, int nChannels) {
 //--------------------------------------------------------------
 void ofApp::draw(){
 
-	
-	current.run();
-	usercount++;
-	User temp = current;
-	current.Switch(temp, usercount);
+	ofDrawCircle(300, 300, 100);
+	if (usercount < 2) // for testing purpose
+	{
+		current.run();
+		usercount++;
+		User temp = current;
+		current.Switch(temp, usercount);
+	}
 
 }
 
