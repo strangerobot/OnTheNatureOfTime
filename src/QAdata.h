@@ -1,7 +1,13 @@
 #pragma once
 #include "ofMain.h"
 #include "ofApp.h"
+#include "ofxVideoRecorder.h"
+#include "globals.h"
+
+
 #define DELAY 1000.0
+
+
 
 class QAdata
 {
@@ -15,6 +21,7 @@ public:
 		string text = " "; //Collects the on screen text
 		string path;//path of file
 		string ext=".mp4";
+
 		
 
 		void record()// function that triggers recording
@@ -24,6 +31,7 @@ public:
 				{
 				cout << "Press the button to record"<<endl; //replace with gui part
 				//listen for arduino button press//or normal button press
+				cout << " ask question :" << text << endl;
 				startrecording();
 				ofSleepMillis(DELAY);
 				stoprecording();
@@ -37,27 +45,31 @@ public:
 
 		void startrecording()
 		{
-			bRecording = !bRecording;
-			if (bRecording && !vidRecorder.isInitialized()) {
-				vidRecorder.setup(path + ofGetTimestampString() + ext, vidGrabber.getWidth(), vidGrabber.getHeight(), 30, sampleRate, channels);
-
-			}
+			//bRecording = !bRecording;
+			//if (bRecording && !vidRecorder.isInitialized()) {
+			//	vidRecorder.setup(path + ofGetTimestampString() + ext, vidGrabber.getWidth(), vidGrabber.getHeight(), 30, sampleRate, channels);
+			
+			//}
+		cout << ">starting recording"<<endl;
 		}
 
 		void stoprecording()
 		{
-			bRecording = false;
-			vidRecorder.close();
+			//bRecording = false;
+			//vidRecorder.close();
+			cout << ">stopping recording"<<endl;
 		}
 
 		void play()
 		{
 			//code for playing the correct video once
+			cout << ">>>Playing_" <<path << endl;
 		}
 
 		void checkverify(string voice)
-		{
-			
+		{	
+
+			cout << "[?] Verification similarity : " << StringCompare(voice, text) << endl;
 			if (StringCompare(voice, text) > tolerance)
 			{
 				verification = 1;
@@ -69,11 +81,11 @@ public:
 
 
 		//below, copied function which retursn similarity index of two strings
-		static double StringCompare(string a, string b) 
+		static double StringCompare(string b,string a) 
 		{
 			if (a == b) //Same string, no iteration needed.
 				return 100;
-			if ((a.length == 0) || (b.length == 0)) //One is empty, second is not
+			if ((a.length() == 0) || (b.length() == 0)) //One is empty, second is not
 			{
 				return 0;
 			}
