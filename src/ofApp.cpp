@@ -8,6 +8,12 @@ const int len = 5;
 int flagquestion = 0, flagqanumber = 0;
 float tolerance = 90.0;
 
+ofVideoGrabber vidGrabber;
+ofxVideoRecorder vidRecorder;
+ofSoundStream   soundStream;
+ofFbo  recordFbo;
+ofPixels recordPixels;
+
 //--------------------------------------------------------------
 void ofApp::setup(){
 
