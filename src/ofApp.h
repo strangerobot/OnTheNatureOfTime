@@ -5,14 +5,11 @@
 #include "QAdata.h"
 #include <stdio.h>
 #include "ofxVideoRecorder.h"
-
 #include "ofxLibwebsockets.h"
+
 #define NUM_MESSAGES 30
 
-class Index {
-public:
-	string qa[5];
-};
+
 
 
 const int len = 5;
@@ -52,7 +49,7 @@ class ofApp : public ofBaseApp{
 		void windowResized(int w, int h);
 		void dragEvent(ofDragInfo dragInfo);
 		void gotMessage(ofMessage msg);
-		void intialiseindex();
+
 
 	
 		
@@ -68,6 +65,7 @@ class ofApp : public ofBaseApp{
 		void onIdle(ofxLibwebsockets::Event& args);
 		void onMessage(ofxLibwebsockets::Event& args);
 		void onBroadcast(ofxLibwebsockets::Event& args);
+		void setupsample ();
 		//recorder//
 		void audioIn(float * input, int bufferSize, int nChannels);
 
@@ -76,6 +74,7 @@ class ofApp : public ofBaseApp{
 
 
 		////////////dontknowhowtoimplementityet
+		User sample; //sets up the first sample user
 		User current;
 
 };

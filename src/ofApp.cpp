@@ -3,15 +3,12 @@
  ofVideoGrabber extern vidGrabber;
 //extern ofxVideoRecorder  vidRecorder;
  
- Index index[2];
+
 
 //--------------------------------------------------------------
 void ofApp::setup(){
 
-	//index[0] = new Index();
-
-	intialiseindex(); //setup the two question sets
-
+	setupsample();
 
 	// setup a server with default options on port 9092
 	// - pass in true after port to set up with SSL
@@ -174,18 +171,16 @@ void ofApp::onMessage(ofxLibwebsockets::Event& args) {
 }
 
 
-void ofApp::intialiseindex() {
 
-	index[0].qa[0] = "apple";
-	index[0].qa[1] = "ball";
-	index[0].qa[2] = "cat";
-	index[0].qa[3] = "dog";
-	index[0].qa[4] = "elephant";
 
-	index[1].qa[0] = "fat";
-	index[1].qa[1] = "goat";
-	index[1].qa[2] = "high";
-	index[1].qa[3] = "jack";
-	index[1].qa[4] = "kidney";
+void ofApp::setupsample() {
 
+	sample.type = 0;
+	for (int i = 0; i++; i < 5)
+	{
+		sample.askquestion[0].verification = 1;
+		sample.askquestion[0].path = "sample_askquestion_0" + ofToString(i);
+		sample.askquestion[0].path = "sample_giveanswer_0" + ofToString(i);
+
+	}
 }

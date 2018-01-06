@@ -5,12 +5,12 @@
 
 #define DELAY 1000.0
 
-extern bool bRecording;
-extern int channels,flagqanumber,flagquestion,sampleRate;
-const int extern len;
-extern float tolerance;
-ofVideoGrabber extern vidGrabber;
-ofxVideoRecorder extern vidRecorder;
+//extern bool bRecording;
+//extern int channels,flagqanumber,flagquestion,sampleRate;
+//const int extern len;
+//extern float tolerance;
+//ofVideoGrabber extern vidGrabber;
+//ofxVideoRecorder extern vidRecorder;
 
 class QAdata
 {
@@ -63,6 +63,7 @@ public:
 		void play()
 		{
 			//code for playing the correct video once
+			cout << "___Playing__" <<path << endl;
 		}
 
 		void checkverify(string voice)

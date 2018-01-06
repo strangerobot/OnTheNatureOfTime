@@ -8,16 +8,22 @@
 //write a code for path allocation
 
 
+
 class User// holds the data of each user who interacts with the installation
 	{
 		//questionask Questions to be asked to the user  //from earlier user                            question/ recorded/verified /(index a)/1,1
 		//giveanswer  Answers the user gives to the question asked by the earlier user/ developing/     answer/ recording/verified /(index a)/0,0
 		//askquestion  Question asked by the user/                                                      question/ recording / verify / (index b)/1,0
 		//answergive  Answer to the questions to be asked by the user (index b) /from earlier user /      answer/ recorded/verified/(index b)/0,1
+
 	public:
 
 		int type,usernumber; //question index 0=a, 1=b; //count is the user number for file saving purposes
 		QAdata questionask[5], giveanswer[5], askquestion[5], answergive[5]; //_Debug phase _ using number instead of variable
+		
+		struct Index {
+			string qa[5];
+		}index[2];
 
 		//constructors
 
@@ -57,6 +63,7 @@ class User// holds the data of each user who interacts with the installation
 	//<below> copies data from previous user and intializes question and paths for the new user
 	void Switch(User &temp, int number) //constructor to switch to temp
 		{
+			intialiseindex();
 			usernumber = number;
 		
 			if (temp.type == 0)
@@ -99,7 +106,23 @@ class User// holds the data of each user who interacts with the installation
 			answergive[i].play();
 		}
 	}
-	
 
+	void intialiseindex() {
+
+		index[0].qa[0] = "apple";
+		index[0].qa[1] = "ball";
+		index[0].qa[2] = "cat";
+		index[0].qa[3] = "dog";
+		index[0].qa[4] = "elephant";
+
+		index[1].qa[0] = "fat";
+		index[1].qa[1] = "goat";
+		index[1].qa[2] = "high";
+		index[1].qa[3] = "jack";
+		index[1].qa[4] = "kidney";
+
+	}
 	};
+
+
 
