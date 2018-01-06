@@ -48,13 +48,13 @@ class ofApp : public ofBaseApp{
 		void onIdle(ofxLibwebsockets::Event& args);
 		void onMessage(ofxLibwebsockets::Event& args);
 		void onBroadcast(ofxLibwebsockets::Event& args);
-		void setupsample ();
+		void setupsample (User&);
 		//recorder//
 		void audioIn(float * input, int bufferSize, int nChannels);
 
 		
 		int usercount = 1; //keeps track of the user number in draw
-		User sample; //sets up the first sample user
+		 //sets up the first sample user
 		User current;
 
 };

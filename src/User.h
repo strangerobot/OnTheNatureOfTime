@@ -74,10 +74,10 @@ class User// holds the data of each user who interacts with the installation
 				questionask[i] = temp.askquestion[i];
 				answergive[i] = temp.giveanswer[i];
 				askquestion[i].text = index[type].qa[i];//intialises question of type from the index
-				askquestion[i].path = ofToString(usernumber) + "_askquestion.mp4";
+				askquestion[i].path = ofToString(usernumber) + "_askquestion_" + ofToString(i);
 				askquestion[i].verification = 0;// write code here for path allocation
 				giveanswer[i].verification = 1;
-				giveanswer[i].path = ofToString(usernumber) + "_giveanswer.mp4";// write code here for path allocation
+				giveanswer[i].path = ofToString(usernumber) + "_giveanswer_"+ ofToString(i);// write code here for path allocation
 
 				//temp.askquestion[i].data=0;
 				//temp.giveanswer[i].data=0;
@@ -113,7 +113,7 @@ class User// holds the data of each user who interacts with the installation
 
 	void intialiseindex() {
 
-		index[0].qa[0] = " human";
+		index[0].qa[0] = " hello how are you";
 		index[0].qa[1] = " ball";
 		index[0].qa[2] = " cat";
 		index[0].qa[3] = " dog";

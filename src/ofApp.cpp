@@ -17,8 +17,8 @@ ofPixels recordPixels;
 //--------------------------------------------------------------
 void ofApp::setup(){
 
-	setupsample();
-
+	
+	User sample;
 	
 	ofxLibwebsockets::ServerOptions options = ofxLibwebsockets::defaultServerOptions();
 	options.port = 9092;
@@ -53,7 +53,7 @@ void ofApp::setup(){
 	ofEnableAlphaBlending();
 
 	///start the server
-	cout << "_sleep";
+	cout << "____sleep";
 	ofSleepMillis(1000);
 	string url = "http";
 	if (server.usingSSL()) {
@@ -65,11 +65,13 @@ void ofApp::setup(){
 
 
 
-	User sample; //follow below
+	 //follow below
 	//loadthe sample user
-
+	setupsample(sample);
+	cout<<"00_sample test"<< sample.giveanswer[0].path << endl;
 	current.Switch(sample, usercount );
 	usercount++;
+	cout <<"01_user test"<< current.answergive[0].path<<endl;
 }
 
 //--------------------------------------------------------------
@@ -191,16 +193,15 @@ void ofApp::onMessage(ofxLibwebsockets::Event& args) {
 
 
 
-void ofApp::setupsample() {
+void ofApp::setupsample( User &sample) {
 
 	sample.type = 0;
-	for (int i = 0; i++; i < 5)
+	for (int i = 0;i < 5;i++)
 	{
-		sample.askquestion[0].verification = 1;
-		sample.askquestion[0].path = "sample_askquestion_0" + ofToString(i);
-		sample.askquestion[0].path = "sample_giveanswer_0" + ofToString(i);
-		
-
+		sample.askquestion[i].verification = 1;
+		sample.askquestion[i].path = "sample_askquestion_0" + ofToString(i);
+		sample.giveanswer[i].path = "sample_giveanswer_0" + ofToString(i);
+		cout << sample.askquestion[i].path << endl;
 	}
-	cout << "____sample intialised_______" << endl;
+	cout << "____sample intialised____" << endl;
 }

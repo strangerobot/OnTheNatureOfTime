@@ -47,7 +47,7 @@ public:
 		{
 			//bRecording = !bRecording;
 			//if (bRecording && !vidRecorder.isInitialized()) {
-			//	vidRecorder.setup(path + ofGetTimestampString() + ext, vidGrabber.getWidth(), vidGrabber.getHeight(), 30, sampleRate, channels);
+			//	vidRecorder.setup(path+ext, vidGrabber.getWidth(), vidGrabber.getHeight(), 30, sampleRate, channels);
 			
 			//}
 		cout << ">starting recording"<<endl;
