@@ -74,7 +74,8 @@ class User// holds the data of each user who interacts with the installation
 				questionask[i] = temp.askquestion[i];
 				answergive[i] = temp.giveanswer[i];
 				askquestion[i].text = index[type].qa[i];//intialises question of type from the index
-				askquestion[i].path = ofToString(usernumber) + "_askquestion.mp4";// write code here for path allocation
+				askquestion[i].path = ofToString(usernumber) + "_askquestion.mp4";
+				askquestion[i].verification = 0;// write code here for path allocation
 				giveanswer[i].verification = 1;
 				giveanswer[i].path = ofToString(usernumber) + "_giveanswer.mp4";// write code here for path allocation
 
@@ -92,37 +93,37 @@ class User// holds the data of each user who interacts with the installation
 	void run()
 	{
 		cout << "Running_user_" << usernumber << endl;
-		for (int i = 0; i<1 && ofGetKeyPressed() != 'e'; i++) //if e is pressed the program exits
+		for (int i = 0; i<2 && ofGetKeyPressed() != 'e'; i++) //if e is pressed the program exits
 		{	
 			flagqanumber = i; //sends question number to the voice recognition code
 			////while (ofGetKeyPressed() != 'c') { cout << "getquestion" << endl; };
-			cout << "getquestion" << endl;
+			cout << "01.getquestion" << endl;
 			questionask[i].play();
 			////while (ofGetKeyPressed() != 'c') { cout << "reply" << endl; }; //wait till c is pressed //arduino wait
-			cout << "reply" << endl;
+			cout << "02.reply" << endl;
 			giveanswer[i].record();
 			////while (ofGetKeyPressed() != 'c') { cout << "ask" << endl; }; //wait till c is pressed //arduino wait //prompt
-			cout << "ask" << endl;
+			cout << "03.ask" << endl;
 			askquestion[i].record();
 			////while (ofGetKeyPressed() != 'c') { cout << "getreply" << endl; }; //wait till c is pressed //arduino wait //prompt
-			cout << "getreply" << endl;
+			cout << "04.getreply" << endl;
 			answergive[i].play();
 		}
 	}
 
 	void intialiseindex() {
 
-		index[0].qa[0] = "apple";
-		index[0].qa[1] = "ball";
-		index[0].qa[2] = "cat";
-		index[0].qa[3] = "dog";
-		index[0].qa[4] = "elephant";
+		index[0].qa[0] = " human";
+		index[0].qa[1] = " ball";
+		index[0].qa[2] = " cat";
+		index[0].qa[3] = " dog";
+		index[0].qa[4] = " elephant";
 
-		index[1].qa[0] = "fat";
-		index[1].qa[1] = "goat";
-		index[1].qa[2] = "high";
-		index[1].qa[3] = "jack";
-		index[1].qa[4] = "kidney";
+		index[1].qa[0] = " fat";
+		index[1].qa[1] = " goat";
+		index[1].qa[2] = " hype";
+		index[1].qa[3] = " jack";
+		index[1].qa[4] = " kidney";
 
 	}
 	};

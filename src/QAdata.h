@@ -81,7 +81,7 @@ public:
 
 
 		//below, copied function which retursn similarity index of two strings
-		static double StringCompare(string a, string b) 
+		static double StringCompare(string b,string a) 
 		{
 			if (a == b) //Same string, no iteration needed.
 				return 100;
