@@ -94,7 +94,7 @@ void ofApp::audioIn(float *input, int bufferSize, int nChannels) {
 void ofApp::draw(){
 
 	ofDrawCircle(300, 300, 100);
-	if (usercount < 2) // for testing purpose
+	if (usercount < 10) // for testing purpose
 	{
 		current.run();
 		usercount++;
@@ -181,8 +181,11 @@ void ofApp::onIdle(ofxLibwebsockets::Event& args) {
 
 void ofApp::onMessage(ofxLibwebsockets::Event& args) {
 	cout << "message " << args.message << endl;
-	if(flagquestion==1)
-	current.askquestion[flagqanumber].checkverify(args.message); //runs the verification function in the current users current askquestion
+	if (flagquestion == 1)
+	{
+		cout << "Verification for __ " << args.message << "___against___" << current.askquestion[flagqanumber].text << endl;
+		current.askquestion[flagqanumber].checkverify(args.message);
+	}//runs the verification function in the current users current askquestion
 }
 
 

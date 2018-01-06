@@ -1,12 +1,8 @@
 ﻿C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Microsoft.CppBuild.targets(392,5): warning MSB8028: The intermediate directory (obj\Debug\) contains files shared from another project (INTERACTIVE ARCHITECTURE.vcxproj).  This can lead to incorrect clean and rebuild behavior.
   main.cpp
   ofApp.cpp
+h:\of_v0.9.8_vs_release\apps\myapps\interactive architecture shared\src\QAdata.h(60): error C2065: 'ednl': undeclared identifier (compiling source file src\main.cpp)
+h:\of_v0.9.8_vs_release\apps\myapps\interactive architecture shared\src\QAdata.h(60): error C2065: 'ednl': undeclared identifier (compiling source file src\ofApp.cpp)
 h:\of_v0.9.8_vs_release\apps\myapps\interactive architecture shared\src\User.h(95): warning C4806: '!=': unsafe operation: no value of type 'bool' promoted to type 'char' can equal the given constant (compiling source file src\ofApp.cpp)
 h:\of_v0.9.8_vs_release\apps\myapps\interactive architecture shared\src\User.h(95): warning C4806: '!=': unsafe operation: no value of type 'bool' promoted to type 'char' can equal the given constant (compiling source file src\main.cpp)
-src\ofApp.cpp(194): warning C4552: '<': operator has no effect; expected operator with side-effect
-  Interactive Architecture Shared.vcxproj -> H:\of_v0.9.8_vs_release\apps\myApps\Interactive Architecture Shared\bin\Interactive Architecture Shared_debug.exe
-  Interactive Architecture Shared.vcxproj -> bin\Interactive Architecture Shared_debug.pdb (Full PDB)
-  
-  	                   9	H:\of_v0.9.8_vs_release\export\vs\Win32\
-  	  *EXTRA File 		 1503232	H:\of_v0.9.8_vs_release\apps\myApps\Interactive Architecture Shared\bin\fmodex64.dll
-  	  *EXTRA File 		 1552384	H:\of_v0.9.8_vs_release\apps\myApps\Interactive Architecture Shared\bin\fmodexL64.dll
+src\ofApp.cpp(197): warning C4552: '<': operator has no effect; expected operator with side-effect
