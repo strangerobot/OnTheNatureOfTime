@@ -31,7 +31,7 @@ public:
 				{
 				cout << "Press the button to record"<<endl; //replace with gui part
 				//listen for arduino button press//or normal button press
-				cout << " ask question _______>" << text << endl;
+				cout << " ask question :" << text << endl;
 				startrecording();
 				ofSleepMillis(DELAY);
 				stoprecording();
@@ -50,25 +50,26 @@ public:
 			//	vidRecorder.setup(path + ofGetTimestampString() + ext, vidGrabber.getWidth(), vidGrabber.getHeight(), 30, sampleRate, channels);
 			
 			//}
-		cout << " ___starting recording"<<endl;
+		cout << ">starting recording"<<endl;
 		}
 
 		void stoprecording()
 		{
 			//bRecording = false;
 			//vidRecorder.close();
-			cout << "____stopping recording"<<endl;
+			cout << ">stopping recording"<<endl;
 		}
 
 		void play()
 		{
 			//code for playing the correct video once
-			cout << "___Playing__" <<path << endl;
+			cout << ">>>Playing_" <<path << endl;
 		}
 
 		void checkverify(string voice)
-		{
+		{	
 
+			cout << "[?] Verification similarity : " << StringCompare(voice, text) << endl;
 			if (StringCompare(voice, text) > tolerance)
 			{
 				verification = 1;

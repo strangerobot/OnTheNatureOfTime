@@ -183,7 +183,7 @@ void ofApp::onMessage(ofxLibwebsockets::Event& args) {
 	cout << "message " << args.message << endl;
 	if (flagquestion == 1)
 	{
-		cout << "Verification for __ " << args.message << "___against___" << current.askquestion[flagqanumber].text << endl;
+		cout << "[?] Verification for __ " << args.message << "___against___" << current.askquestion[flagqanumber].text << endl;
 		current.askquestion[flagqanumber].checkverify(args.message);
 	}//runs the verification function in the current users current askquestion
 }
