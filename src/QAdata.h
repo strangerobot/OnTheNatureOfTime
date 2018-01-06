@@ -2,15 +2,12 @@
 #include "ofMain.h"
 #include "ofApp.h"
 #include "ofxVideoRecorder.h"
+#include "globals.h"
+
 
 #define DELAY 1000.0
 
-//extern bool bRecording;
-//extern int channels,flagqanumber,flagquestion,sampleRate;
-//const int extern len;
-//extern float tolerance;
-//ofVideoGrabber extern vidGrabber;
-//ofxVideoRecorder extern vidRecorder;
+
 
 class QAdata
 {

@@ -1,29 +1,20 @@
 ﻿C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Microsoft.CppBuild.targets(392,5): warning MSB8028: The intermediate directory (obj\Debug\) contains files shared from another project (INTERACTIVE ARCHITECTURE.vcxproj).  This can lead to incorrect clean and rebuild behavior.
   main.cpp
   ofApp.cpp
-h:\of_v0.9.8_vs_release\apps\myapps\interactive architecture shared\src\User.h(96): warning C4806: '!=': unsafe operation: no value of type 'bool' promoted to type 'char' can equal the given constant (compiling source file src\ofApp.cpp)
-h:\of_v0.9.8_vs_release\apps\myapps\interactive architecture shared\src\User.h(99): warning C4806: '!=': unsafe operation: no value of type 'bool' promoted to type 'char' can equal the given constant (compiling source file src\ofApp.cpp)
-h:\of_v0.9.8_vs_release\apps\myapps\interactive architecture shared\src\User.h(101): warning C4806: '!=': unsafe operation: no value of type 'bool' promoted to type 'char' can equal the given constant (compiling source file src\ofApp.cpp)
-h:\of_v0.9.8_vs_release\apps\myapps\interactive architecture shared\src\User.h(103): warning C4806: '!=': unsafe operation: no value of type 'bool' promoted to type 'char' can equal the given constant (compiling source file src\ofApp.cpp)
-h:\of_v0.9.8_vs_release\apps\myapps\interactive architecture shared\src\User.h(105): warning C4806: '!=': unsafe operation: no value of type 'bool' promoted to type 'char' can equal the given constant (compiling source file src\ofApp.cpp)
-h:\of_v0.9.8_vs_release\apps\myapps\interactive architecture shared\src\User.h(96): warning C4806: '!=': unsafe operation: no value of type 'bool' promoted to type 'char' can equal the given constant (compiling source file src\main.cpp)
-h:\of_v0.9.8_vs_release\apps\myapps\interactive architecture shared\src\User.h(99): warning C4806: '!=': unsafe operation: no value of type 'bool' promoted to type 'char' can equal the given constant (compiling source file src\main.cpp)
-h:\of_v0.9.8_vs_release\apps\myapps\interactive architecture shared\src\User.h(101): warning C4806: '!=': unsafe operation: no value of type 'bool' promoted to type 'char' can equal the given constant (compiling source file src\main.cpp)
-h:\of_v0.9.8_vs_release\apps\myapps\interactive architecture shared\src\User.h(103): warning C4806: '!=': unsafe operation: no value of type 'bool' promoted to type 'char' can equal the given constant (compiling source file src\main.cpp)
-h:\of_v0.9.8_vs_release\apps\myapps\interactive architecture shared\src\User.h(105): warning C4806: '!=': unsafe operation: no value of type 'bool' promoted to type 'char' can equal the given constant (compiling source file src\main.cpp)
-src\ofApp.cpp(179): warning C4552: '<': operator has no effect; expected operator with side-effect
-ofApp.obj : error LNK2005: "bool bRecording" (?bRecording@@3_NA) already defined in main.obj
-ofApp.obj : error LNK2005: "int channels" (?channels@@3HA) already defined in main.obj
-ofApp.obj : error LNK2005: "int flagqanumber" (?flagqanumber@@3HA) already defined in main.obj
-ofApp.obj : error LNK2005: "int flagquestion" (?flagquestion@@3HA) already defined in main.obj
-ofApp.obj : error LNK2005: "int sampleRate" (?sampleRate@@3HA) already defined in main.obj
-ofApp.obj : error LNK2005: "int const len" (?len@@3HB) already defined in main.obj
-ofApp.obj : error LNK2005: "float tolerance" (?tolerance@@3MA) already defined in main.obj
-ofApp.obj : error LNK2005: "class ofVideoGrabber vidGrabber" (?vidGrabber@@3VofVideoGrabber@@A) already defined in main.obj
-ofApp.obj : error LNK2005: "class ofxVideoRecorder vidRecorder" (?vidRecorder@@3VofxVideoRecorder@@A) already defined in main.obj
-ofApp.obj : error LNK2005: "class ofSoundStream soundStream" (?soundStream@@3VofSoundStream@@A) already defined in main.obj
-ofApp.obj : error LNK2005: "class ofFbo recordFbo" (?recordFbo@@3VofFbo@@A) already defined in main.obj
-ofApp.obj : error LNK2005: "class ofPixels_<unsigned char> recordPixels" (?recordPixels@@3V?$ofPixels_@E@@A) already defined in main.obj
+h:\of_v0.9.8_vs_release\apps\myapps\interactive architecture shared\src\User.h(95): warning C4806: '!=': unsafe operation: no value of type 'bool' promoted to type 'char' can equal the given constant (compiling source file src\ofApp.cpp)
+h:\of_v0.9.8_vs_release\apps\myapps\interactive architecture shared\src\User.h(98): warning C4806: '!=': unsafe operation: no value of type 'bool' promoted to type 'char' can equal the given constant (compiling source file src\ofApp.cpp)
+h:\of_v0.9.8_vs_release\apps\myapps\interactive architecture shared\src\User.h(100): warning C4806: '!=': unsafe operation: no value of type 'bool' promoted to type 'char' can equal the given constant (compiling source file src\ofApp.cpp)
+h:\of_v0.9.8_vs_release\apps\myapps\interactive architecture shared\src\User.h(102): warning C4806: '!=': unsafe operation: no value of type 'bool' promoted to type 'char' can equal the given constant (compiling source file src\ofApp.cpp)
+h:\of_v0.9.8_vs_release\apps\myapps\interactive architecture shared\src\User.h(104): warning C4806: '!=': unsafe operation: no value of type 'bool' promoted to type 'char' can equal the given constant (compiling source file src\ofApp.cpp)
+h:\of_v0.9.8_vs_release\apps\myapps\interactive architecture shared\src\User.h(95): warning C4806: '!=': unsafe operation: no value of type 'bool' promoted to type 'char' can equal the given constant (compiling source file src\main.cpp)
+h:\of_v0.9.8_vs_release\apps\myapps\interactive architecture shared\src\User.h(98): warning C4806: '!=': unsafe operation: no value of type 'bool' promoted to type 'char' can equal the given constant (compiling source file src\main.cpp)
+h:\of_v0.9.8_vs_release\apps\myapps\interactive architecture shared\src\User.h(100): warning C4806: '!=': unsafe operation: no value of type 'bool' promoted to type 'char' can equal the given constant (compiling source file src\main.cpp)
+h:\of_v0.9.8_vs_release\apps\myapps\interactive architecture shared\src\User.h(102): warning C4806: '!=': unsafe operation: no value of type 'bool' promoted to type 'char' can equal the given constant (compiling source file src\main.cpp)
+h:\of_v0.9.8_vs_release\apps\myapps\interactive architecture shared\src\User.h(104): warning C4806: '!=': unsafe operation: no value of type 'bool' promoted to type 'char' can equal the given constant (compiling source file src\main.cpp)
+src\ofApp.cpp(182): warning C4552: '<': operator has no effect; expected operator with side-effect
 videoInputD.lib(videoInput.obj) : warning LNK4075: ignoring '/EDITANDCONTINUE' due to '/SAFESEH' specification
      Creating library bin\Interactive Architecture Shared_debug.lib and object bin\Interactive Architecture Shared_debug.exp
-bin\Interactive Architecture Shared_debug.exe : fatal error LNK1169: one or more multiply defined symbols found
+ofApp.obj : error LNK2001: unresolved external symbol "class ofVideoGrabber vidGrabber" (?vidGrabber@@3VofVideoGrabber@@A)
+ofApp.obj : error LNK2001: unresolved external symbol "class ofxVideoRecorder vidRecorder" (?vidRecorder@@3VofxVideoRecorder@@A)
+ofApp.obj : error LNK2001: unresolved external symbol "class ofSoundStream soundStream" (?soundStream@@3VofSoundStream@@A)
+bin\Interactive Architecture Shared_debug.exe : fatal error LNK1120: 3 unresolved externals

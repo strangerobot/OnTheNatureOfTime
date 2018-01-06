@@ -2,7 +2,6 @@
 #include "QAdata.h"
 #include "ofApp.h"
 
-
 //1st user Intialiser will be tackled in a different code
 //index is an object with two lists of question
 //write a code for path allocation

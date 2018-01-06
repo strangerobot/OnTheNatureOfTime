@@ -1,9 +1,12 @@
+#pragma once
 #include "ofApp.h"
 
- ofVideoGrabber extern vidGrabber;
-//extern ofxVideoRecorder  vidRecorder;
- 
-
+bool bRecording = false; //checks if recording is on or not
+int sampleRate = 44100;
+int channels = 2;
+const int len = 5;
+int flagquestion = 0, flagqanumber = 0;
+float tolerance = 90.0;
 
 //--------------------------------------------------------------
 void ofApp::setup(){
