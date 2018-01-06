@@ -56,6 +56,18 @@ void ofApp::setup(){
 	bRecording = false;
 	ofEnableAlphaBlending();
 
+	///start the server
+	cout << "_sleep";
+	ofSleepMillis(1000);
+	string url = "http";
+	if (server.usingSSL()) {
+		url += "s";
+	}
+	url += "://localhost:" + ofToString(server.getPort());
+	ofLaunchBrowser(url);
+	///
+
+
 
 	User sample; //follow below
 	//loadthe sample user
@@ -115,12 +127,7 @@ void ofApp::mouseDragged(int x, int y, int button){
 
 //--------------------------------------------------------------
 void ofApp::mousePressed(int x, int y, int button){
-	string url = "http";
-	if (server.usingSSL()) {
-		url += "s";
-	}
-	url += "://localhost:" + ofToString(server.getPort());
-	ofLaunchBrowser(url);
+
 }
 
 //--------------------------------------------------------------
@@ -190,6 +197,8 @@ void ofApp::setupsample() {
 		sample.askquestion[0].verification = 1;
 		sample.askquestion[0].path = "sample_askquestion_0" + ofToString(i);
 		sample.askquestion[0].path = "sample_giveanswer_0" + ofToString(i);
+		
 
 	}
+	cout << "____sample intialised_______" << endl;
 }

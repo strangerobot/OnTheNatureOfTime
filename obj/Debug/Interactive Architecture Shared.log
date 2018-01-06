@@ -1,23 +1,12 @@
 ﻿C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Microsoft.CppBuild.targets(392,5): warning MSB8028: The intermediate directory (obj\Debug\) contains files shared from another project (INTERACTIVE ARCHITECTURE.vcxproj).  This can lead to incorrect clean and rebuild behavior.
+  main.cpp
   ofApp.cpp
-h:\of_v0.9.8_vs_release\apps\myapps\interactive architecture shared\src\User.h(95): warning C4806: '!=': unsafe operation: no value of type 'bool' promoted to type 'char' can equal the given constant
-h:\of_v0.9.8_vs_release\apps\myapps\interactive architecture shared\src\User.h(98): warning C4806: '!=': unsafe operation: no value of type 'bool' promoted to type 'char' can equal the given constant
-h:\of_v0.9.8_vs_release\apps\myapps\interactive architecture shared\src\User.h(100): warning C4806: '!=': unsafe operation: no value of type 'bool' promoted to type 'char' can equal the given constant
-h:\of_v0.9.8_vs_release\apps\myapps\interactive architecture shared\src\User.h(102): warning C4806: '!=': unsafe operation: no value of type 'bool' promoted to type 'char' can equal the given constant
-h:\of_v0.9.8_vs_release\apps\myapps\interactive architecture shared\src\User.h(104): warning C4806: '!=': unsafe operation: no value of type 'bool' promoted to type 'char' can equal the given constant
-src\ofApp.cpp(188): warning C4552: '<': operator has no effect; expected operator with side-effect
-videoInputD.lib(videoInput.obj) : warning LNK4075: ignoring '/EDITANDCONTINUE' due to '/SAFESEH' specification
-     Creating library bin\Interactive Architecture Shared_debug.lib and object bin\Interactive Architecture Shared_debug.exp
+h:\of_v0.9.8_vs_release\apps\myapps\interactive architecture shared\src\User.h(95): warning C4806: '!=': unsafe operation: no value of type 'bool' promoted to type 'char' can equal the given constant (compiling source file src\ofApp.cpp)
+h:\of_v0.9.8_vs_release\apps\myapps\interactive architecture shared\src\User.h(95): warning C4806: '!=': unsafe operation: no value of type 'bool' promoted to type 'char' can equal the given constant (compiling source file src\main.cpp)
+src\ofApp.cpp(195): warning C4552: '<': operator has no effect; expected operator with side-effect
   Interactive Architecture Shared.vcxproj -> H:\of_v0.9.8_vs_release\apps\myApps\Interactive Architecture Shared\bin\Interactive Architecture Shared_debug.exe
   Interactive Architecture Shared.vcxproj -> bin\Interactive Architecture Shared_debug.pdb (Full PDB)
   
   	                   9	H:\of_v0.9.8_vs_release\export\vs\Win32\
-  	    New File  		 2939392	H:\of_v0.9.8_vs_release\export\vs\Win32\assimp.dll
-  	    New File  		 1266176	H:\of_v0.9.8_vs_release\export\vs\Win32\fmodex.dll
-  	    New File  		 1312768	H:\of_v0.9.8_vs_release\export\vs\Win32\fmodexL.dll
-  	    New File  		 5647872	H:\of_v0.9.8_vs_release\export\vs\Win32\FreeImage.dll
-  	    New File  		  580608	H:\of_v0.9.8_vs_release\export\vs\Win32\freetype.dll
-  	    New File  		  237568	H:\of_v0.9.8_vs_release\export\vs\Win32\glut32.dll
-  	    New File  		 1178624	H:\of_v0.9.8_vs_release\export\vs\Win32\libeay32.dll
-  	    New File  		  269824	H:\of_v0.9.8_vs_release\export\vs\Win32\ssleay32.dll
-  	    New File  		   69632	H:\of_v0.9.8_vs_release\export\vs\Win32\Zlib.dll
+  	  *EXTRA File 		 1503232	H:\of_v0.9.8_vs_release\apps\myApps\Interactive Architecture Shared\bin\fmodex64.dll
+  	  *EXTRA File 		 1552384	H:\of_v0.9.8_vs_release\apps\myApps\Interactive Architecture Shared\bin\fmodexL64.dll

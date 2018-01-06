@@ -92,16 +92,20 @@ class User// holds the data of each user who interacts with the installation
 	void run()
 	{
 		cout << "Running_user_" << usernumber << endl;
-		for (int i = 0; i<len && ofGetKeyPressed() != 'e'; i++) //if e is pressed the program exits
+		for (int i = 0; i<1 && ofGetKeyPressed() != 'e'; i++) //if e is pressed the program exits
 		{	
 			flagqanumber = i; //sends question number to the voice recognition code
-			while (ofGetKeyPressed() != 'c') { cout << "getquestion" << endl; };
+			////while (ofGetKeyPressed() != 'c') { cout << "getquestion" << endl; };
+			cout << "getquestion" << endl;
 			questionask[i].play();
-			while (ofGetKeyPressed() != 'c') { cout << "reply" << endl; }; //wait till c is pressed //arduino wait
+			////while (ofGetKeyPressed() != 'c') { cout << "reply" << endl; }; //wait till c is pressed //arduino wait
+			cout << "reply" << endl;
 			giveanswer[i].record();
-			while (ofGetKeyPressed() != 'c') { cout << "ask" << endl; }; //wait till c is pressed //arduino wait //prompt
+			////while (ofGetKeyPressed() != 'c') { cout << "ask" << endl; }; //wait till c is pressed //arduino wait //prompt
+			cout << "ask" << endl;
 			askquestion[i].record();
-			while (ofGetKeyPressed() != 'c') { cout << "getreply" << endl; }; //wait till c is pressed //arduino wait //prompt
+			////while (ofGetKeyPressed() != 'c') { cout << "getreply" << endl; }; //wait till c is pressed //arduino wait //prompt
+			cout << "getreply" << endl;
 			answergive[i].play();
 		}
 	}
