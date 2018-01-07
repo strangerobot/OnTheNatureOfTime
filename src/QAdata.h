@@ -3,6 +3,7 @@
 #include "ofApp.h"
 #include "ofxVideoRecorder.h"
 #include "globals.h"
+#include <conio.h>
 
 
 #define DELAY 1000.0
@@ -21,7 +22,7 @@ public:
 		string text = " "; //Collects the on screen text
 		string path;//path of file
 		string ext=".mp4";
-
+		char key;
 		
 
 		void record( bool question )// function that triggers recording
@@ -35,20 +36,32 @@ public:
 					///////cout << "Press the button to record"<<endl; //replace with gui part
 					//listen for arduino button press//or normal button press
 					cout << " ask question :" << text << endl;
-					startrecording();
-					ofSleepMillis(DELAY);
-					stoprecording();
-					if (verification != 1)
-						////////	cout << "wrong question, try again" << endl;
-						ofSleepMillis(DELAY); //delay
 
+
+					cout << "press space to start recording" << endl;
+					getch();
+
+					startrecording();
+
+					cout << "press space to stop recording" << endl;
+					getch();
+					if (verification != 1)
+					{
+						cout << "wrong question, try again" << endl;
+						verification = 0;
+					}
+
+					stoprecording();
 				} while (verification != 1);
 			}
 
 			if (question == false)
 			{
+				cout << "press space to start recording" << endl;
+				getch();
 				startrecording();
-				cout << "recording" << endl;
+				cout << "press space to stop recording"<<endl;
+				getch();
 				stoprecording();
 			}
 
