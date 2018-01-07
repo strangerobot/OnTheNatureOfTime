@@ -70,18 +70,19 @@ public:
 
 		void startrecording()
 		{
-			//bRecording = !bRecording;
-			//if (bRecording && !vidRecorder.isInitialized()) {
-			//	vidRecorder.setup(path+ext, vidGrabber.getWidth(), vidGrabber.getHeight(), 30, sampleRate, channels);
-			
-			//}
+			bRecording = !bRecording;
+			if (bRecording && !vidRecorder.isInitialized()) {
+				vidRecorder.setup(path+ext, vidGrabber.getWidth(), vidGrabber.getHeight(), 30, sampleRate, channels);
+
+				vidRecorder.start();
+			}
 		cout << ">starting recording_"<<path<<endl;
 		}
 
 		void stoprecording()
 		{
-			//bRecording = false;
-			//vidRecorder.close();
+			bRecording = false;
+			vidRecorder.close();
 			cout << ">stopping recording"<<endl;
 		}
 
