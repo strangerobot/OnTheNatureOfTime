@@ -101,10 +101,10 @@ class User// holds the data of each user who interacts with the installation
 			questionask[i].play();
 			////while (ofGetKeyPressed() != 'c') { cout << "reply" << endl; }; //wait till c is pressed //arduino wait
 			cout << "02.reply" << endl;
-			giveanswer[i].record();
+			giveanswer[i].record(false);
 			////while (ofGetKeyPressed() != 'c') { cout << "ask" << endl; }; //wait till c is pressed //arduino wait //prompt
 			cout << "03.ask" << endl;
-			askquestion[i].record();
+			askquestion[i].record(true);
 			////while (ofGetKeyPressed() != 'c') { cout << "getreply" << endl; }; //wait till c is pressed //arduino wait //prompt
 			cout << "04.getreply" << endl;
 			answergive[i].play();
@@ -120,7 +120,7 @@ class User// holds the data of each user who interacts with the installation
 		index[0].qa[4] = " elephant";
 
 		index[1].qa[0] = " fat";
-		index[1].qa[1] = " goat";
+		index[1].qa[1] = " good";
 		index[1].qa[2] = " hype";
 		index[1].qa[3] = " jack";
 		index[1].qa[4] = " kidney";

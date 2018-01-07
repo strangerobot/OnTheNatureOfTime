@@ -24,22 +24,34 @@ public:
 
 		
 
-		void record()// function that triggers recording
+		void record( bool question )// function that triggers recording
 		{
-			flagquestion = 1;
-			while (verification != 1)
+			
+			if(question==true)
+			{ 
+				flagquestion = 1;
+				do
 				{
-				cout << "Press the button to record"<<endl; //replace with gui part
-				//listen for arduino button press//or normal button press
-				cout << " ask question :" << text << endl;
-				startrecording();
-				ofSleepMillis(DELAY);
-				stoprecording();
-				if (verification != 1)
-					cout << "wrong question, try again" << endl;
-				ofSleepMillis(DELAY); //delay
+					///////cout << "Press the button to record"<<endl; //replace with gui part
+					//listen for arduino button press//or normal button press
+					cout << " ask question :" << text << endl;
+					startrecording();
+					ofSleepMillis(DELAY);
+					stoprecording();
+					if (verification != 1)
+						////////	cout << "wrong question, try again" << endl;
+						ofSleepMillis(DELAY); //delay
 
-				}
+				} while (verification != 1);
+			}
+
+			if (question == false)
+			{
+				startrecording();
+				cout << "recording" << endl;
+				stoprecording();
+			}
+
 
 		}
 
@@ -50,7 +62,7 @@ public:
 			//	vidRecorder.setup(path+ext, vidGrabber.getWidth(), vidGrabber.getHeight(), 30, sampleRate, channels);
 			
 			//}
-		cout << ">starting recording"<<endl;
+		cout << ">starting recording_"<<path<<endl;
 		}
 
 		void stoprecording()
@@ -69,7 +81,7 @@ public:
 		void checkverify(string voice)
 		{	
 
-			cout << "[?] Verification similarity : " << StringCompare(voice, text) << endl;
+			////////cout << "[?] Verification similarity : " << StringCompare(voice, text) << endl;
 			if (StringCompare(voice, text) > tolerance)
 			{
 				verification = 1;

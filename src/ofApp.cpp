@@ -6,7 +6,7 @@ int sampleRate = 44100;
 int channels = 2;
 const int len = 5;
 int flagquestion = 0, flagqanumber = 0;
-float tolerance = 90.0;
+float tolerance = 60.0;
 
 ofVideoGrabber vidGrabber;
 ofxVideoRecorder vidRecorder;
@@ -199,8 +199,8 @@ void ofApp::setupsample( User &sample) {
 	for (int i = 0;i < 5;i++)
 	{
 		sample.askquestion[i].verification = 1;
-		sample.askquestion[i].path = "sample_askquestion_0" + ofToString(i);
-		sample.giveanswer[i].path = "sample_giveanswer_0" + ofToString(i);
+		sample.askquestion[i].path = "sample_askquestion_" + ofToString(i);
+		sample.giveanswer[i].path = "sample_giveanswer_" + ofToString(i);
 		cout << sample.askquestion[i].path << endl;
 	}
 	cout << "____sample intialised____" << endl;
