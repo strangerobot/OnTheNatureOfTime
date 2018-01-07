@@ -95,8 +95,9 @@ void ofApp::audioIn(float *input, int bufferSize, int nChannels) {
 //--------------------------------------------------------------
 void ofApp::draw(){
 
-	
-	if (usercount < 5) // for testing purpose
+	ofSetColor(255, 255, 255);
+	vidGrabber.draw(0, 0);
+	if (usercount < 1) // for testing purpose
 	{
 		current.run();
 		usercount++;
