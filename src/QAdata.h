@@ -72,7 +72,7 @@ public:
 		{
 			bRecording = !bRecording;
 			if (bRecording && !vidRecorder.isInitialized()) {
-				vidRecorder.setup(path+ext, vidGrabber.getWidth(), vidGrabber.getHeight(), 30, sampleRate, channels);
+				vidRecorder.setup(path+ext, vidGrabber.getWidth(), vidGrabber.getHeight(), 30);//, sampleRate, channels);
 
 				vidRecorder.start();
 			}

@@ -95,7 +95,7 @@ void ofApp::audioIn(float *input, int bufferSize, int nChannels) {
 //--------------------------------------------------------------
 void ofApp::draw(){
 
-	ofDrawCircle(300, 300, 100);
+	
 	if (usercount < 5) // for testing purpose
 	{
 		current.run();
@@ -108,6 +108,8 @@ void ofApp::draw(){
 
 //--------------------------------------------------------------
 void ofApp::keyPressed(int key){
+
+
 
 }
 
