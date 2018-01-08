@@ -143,6 +143,9 @@
     <ClInclude Include="src\ThreadedObject.h">
       <Filter>src</Filter>
     </ClInclude>
+    <ClInclude Include="src\globals.h">
+      <Filter>src</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="icon.rc" />

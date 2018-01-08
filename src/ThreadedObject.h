@@ -47,7 +47,6 @@ public:
 		while (isThreadRunning())
 		{
 
-			update();
 			if (usercount < 3) // for testing purpose
 			{
 				current.run();
@@ -77,16 +76,6 @@ public:
 	
 	}
 
-	void update()
-	{
-		if (vidGrabber.isFrameNew() && bRecording) {
-			bool success = vidRecorder.addFrame(vidGrabber.getPixelsRef());
-			if (!success) {
-				ofLogWarning("This frame was not added!");
-			}
-		}
-
-	}
 
 	
 };

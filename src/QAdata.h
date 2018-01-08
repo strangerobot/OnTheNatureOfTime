@@ -22,12 +22,19 @@ public:
 		string text = " "; //Collects the on screen text
 		string path;//path of file
 		string ext=".mp4";
-		char key;
+		ofVideoGrabber vidGrabber;
+
+
 		
 
 		void record( bool question )// function that triggers recording
 		{
+			vidGrabber.setDesiredFrameRate(30);
+			vidGrabber.initGrabber(640, 480);
 			
+			for(int i=0;i<10;i++)
+				vidGrabber.update();
+
 			if(question==true)
 			{ 
 				flagquestion = 1;
@@ -38,13 +45,7 @@ public:
 					cout << " ask question :" << text << endl;
 
 
-					cout << "press space to start recording" << endl;
-					getch();
-
-					startrecording();
-
-					cout << "press space to stop recording" << endl;
-					getch();
+					recordandwait();
 					if (verification != 1)
 					{
 						cout << "wrong question, try again" << endl;
@@ -57,23 +58,36 @@ public:
 
 			if (question == false)
 			{
-				cout << "hold space to start recording" << endl;
-				if(key>0)
-				startrecording();
-				while(key>0)
-				cout << "release space to stop recording" << endl;
-				stoprecording();
+				recordandwait();
 			}
 
 
 		}
+
+		void recordandwait()
+		{
+			cout << "hold space to start recording" << endl;
+			startrecording();
+			cout << "release space to stop recording__" << key << endl;
+			while (key > 0) {
+				
+				vidGrabber.update();
+				if (vidGrabber.isFrameNew() && bRecording) {
+					bool success = vidRecorder.addFrame(vidGrabber.getPixelsRef());
+					if (!success) {
+						ofLogWarning("This frame was not added!");
+					}
+				}
+			}
+			stoprecording();
+		}
+
 
 		void startrecording()
 		{
 			bRecording = !bRecording;
 			if (bRecording && !vidRecorder.isInitialized()) {
 				vidRecorder.setup(path+ext, vidGrabber.getWidth(), vidGrabber.getHeight(), 30, sampleRate, channels);
-
 				vidRecorder.start();
 			}
 		cout << ">starting recording_"<<path<<endl;

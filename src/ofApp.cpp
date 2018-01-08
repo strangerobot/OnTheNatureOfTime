@@ -8,11 +8,12 @@ const int len = 5;
 int flagquestion = 0, flagqanumber = 0;
 float tolerance = 60.0;
 
-ofVideoGrabber vidGrabber;
+
 ofxVideoRecorder vidRecorder;
 ofSoundStream   soundStream;
 ofFbo  recordFbo;
 ofPixels recordPixels;
+int key = 0;
 
 //--------------------------------------------------------------
 void ofApp::setup(){
@@ -35,8 +36,7 @@ void ofApp::setup(){
 
 	ofSetFrameRate(60);
 	//ofSetLogLevel(OF_LOG_VERBOSE);
-	vidGrabber.setDesiredFrameRate(30);
-	vidGrabber.initGrabber(640, 480);
+
 #ifdef TARGET_WIN32
 	vidRecorder.setFfmpegLocation("ffmpeg"); // use this is you have ffmpeg installed in your data folder
 #endif
@@ -48,7 +48,7 @@ void ofApp::setup(){
 	vidRecorder.setAudioCodec("mp3");
 	vidRecorder.setAudioBitrate("192k");
 	soundStream.setup(this, 0, channels, sampleRate, 256, 1);
-	ofSetWindowShape(vidGrabber.getWidth(), vidGrabber.getHeight());
+	//ofSetWindowShape(vidGrabber.getWidth(), vidGrabber.getHeight());
 	bRecording = false;
 	ofEnableAlphaBlending();
 
@@ -83,14 +83,7 @@ void ofApp::audioIn(float *input, int bufferSize, int nChannels) {
 //--------------------------------------------------------------
 void ofApp::draw(){
 
-	ofSetColor(255, 255, 255);
 	
-	
-	if (key>0)
-	{	
-		vidGrabber.draw(0, 0);
-		vidGrabber.update();
-	}
 	
 
 }

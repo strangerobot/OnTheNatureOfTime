@@ -60,6 +60,5 @@ class ofApp : public ofBaseApp{
 		
 		ThreadedObject threadobj;
 
-		int key = 0;
 
 };

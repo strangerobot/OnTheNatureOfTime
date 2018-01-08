@@ -10,8 +10,9 @@ extern float tolerance; //tolerance for voice recognition
 extern bool bRecording; //checks if recording is on or not
 extern int sampleRate;
 extern int channels;
-extern ofVideoGrabber vidGrabber;
+
 extern ofxVideoRecorder vidRecorder;
 extern ofSoundStream   soundStream;
 extern ofFbo  recordFbo;
 extern ofPixels recordPixels;
+extern int key;
