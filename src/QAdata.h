@@ -57,11 +57,11 @@ public:
 
 			if (question == false)
 			{
-				cout << "press space to start recording" << endl;
-				getch();
+				cout << "hold space to start recording" << endl;
+				if(key>0)
 				startrecording();
-				cout << "press space to stop recording"<<endl;
-				getch();
+				while(key>0)
+				cout << "release space to stop recording" << endl;
 				stoprecording();
 			}
 
@@ -72,7 +72,7 @@ public:
 		{
 			bRecording = !bRecording;
 			if (bRecording && !vidRecorder.isInitialized()) {
-				vidRecorder.setup(path+ext, vidGrabber.getWidth(), vidGrabber.getHeight(), 30);//, sampleRate, channels);
+				vidRecorder.setup(path+ext, vidGrabber.getWidth(), vidGrabber.getHeight(), 30, sampleRate, channels);
 
 				vidRecorder.start();
 			}

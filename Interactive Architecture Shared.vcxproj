@@ -187,6 +187,7 @@
     <ClInclude Include="src\globals.h" />
     <ClInclude Include="src\ofApp.h" />
     <ClInclude Include="src\QAdata.h" />
+    <ClInclude Include="src\ThreadedObject.h" />
     <ClInclude Include="src\User.h" />
     <ClInclude Include="..\..\..\addons\ofxLibwebsockets\src\ofxLibwebsockets.h" />
     <ClInclude Include="..\..\..\addons\ofxLibwebsockets\libs\jsoncpp\json\json-forwards.h" />

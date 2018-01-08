@@ -18,7 +18,7 @@ ofPixels recordPixels;
 void ofApp::setup(){
 
 	
-	User sample;
+	
 	
 	ofxLibwebsockets::ServerOptions options = ofxLibwebsockets::defaultServerOptions();
 	options.port = 9092;
@@ -65,58 +65,52 @@ void ofApp::setup(){
 
 
 
-	 //follow below
-	//loadthe sample user
-	setupsample(sample);
-	cout<<"00_sample test"<< sample.giveanswer[0].path << endl;
-	current.Switch(sample, usercount );
-	usercount++;
-	cout <<"01_user test"<< current.answergive[0].path<<endl;
+	threadobj.start(); //trying to run the service in parallel to the main program
 }
 
 //--------------------------------------------------------------
 void ofApp::update(){
 
-	vidGrabber.update();
-	if (vidGrabber.isFrameNew() && bRecording) {
-		bool success = vidRecorder.addFrame(vidGrabber.getPixelsRef());
-		if (!success) {
-			ofLogWarning("This frame was not added!");
-		}
-	}
+
 
 }
 
 void ofApp::audioIn(float *input, int bufferSize, int nChannels) {
 	if (bRecording)
 		vidRecorder.addAudioSamples(input, bufferSize, nChannels);
-}
+} //might need to branchout audio in a different thread
 
 //--------------------------------------------------------------
 void ofApp::draw(){
 
 	ofSetColor(255, 255, 255);
-	vidGrabber.draw(0, 0);
-	if (usercount < 1) // for testing purpose
-	{
-		current.run();
-		usercount++;
-		User temp = current;
-		current.Switch(temp, usercount);
+	
+	
+	if (key>0)
+	{	
+		vidGrabber.draw(0, 0);
+		vidGrabber.update();
 	}
+	
+
+}
+
+void ofApp::exit()
+{
+
+	threadobj.stop();
+}
+
+//--------------------------------------------------------------
+void ofApp::keyPressed(int k){
+
+	key += k;
 
 }
 
 //--------------------------------------------------------------
-void ofApp::keyPressed(int key){
-
-
-
-}
-
-//--------------------------------------------------------------
-void ofApp::keyReleased(int key){
-
+void ofApp::keyReleased(int k){
+	key = 0;
 }
 
 //--------------------------------------------------------------
@@ -126,7 +120,7 @@ void ofApp::mouseMoved(int x, int y ){
 
 //--------------------------------------------------------------
 void ofApp::mouseDragged(int x, int y, int button){
-
+	
 }
 
 //--------------------------------------------------------------
@@ -188,23 +182,11 @@ void ofApp::onMessage(ofxLibwebsockets::Event& args) {
 	cout << "message " << args.message << endl;
 	if (flagquestion == 1)
 	{
-		cout << "[?] Verification for __|" <<args.message<< "|___against___|" << current.askquestion[flagqanumber].text<<"|"<< endl;
-		current.askquestion[flagqanumber].checkverify(args.message);
+		cout << "[?] Verification for __|" <<args.message<< "|___against___|" << threadobj.current.askquestion[flagqanumber].text<<"|"<< endl;
+		threadobj.current.askquestion[flagqanumber].checkverify(args.message);
 	}//runs the verification function in the current users current askquestion
 }
 
 
 
 
-void ofApp::setupsample( User &sample) {
-
-	sample.type = 0;
-	for (int i = 0;i < 5;i++)
-	{
-		sample.askquestion[i].verification = 1;
-		sample.askquestion[i].path = "sample_askquestion_" + ofToString(i);
-		sample.giveanswer[i].path = "sample_giveanswer_" + ofToString(i);
-		cout << sample.askquestion[i].path << endl;
-	}
-	cout << "____sample intialised____" << endl;
-}

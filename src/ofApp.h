@@ -7,6 +7,7 @@
 #include "ofxVideoRecorder.h"
 #include "ofxLibwebsockets.h"
 #include "globals.h"
+#include "ThreadedObject.h"
 
 #define NUM_MESSAGES 30
 
@@ -20,6 +21,7 @@ class ofApp : public ofBaseApp{
 		void setup();
 		void update();
 		void draw();
+		
 
 		void keyPressed(int key);
 		void keyReleased(int key);
@@ -32,7 +34,7 @@ class ofApp : public ofBaseApp{
 		void windowResized(int w, int h);
 		void dragEvent(ofDragInfo dragInfo);
 		void gotMessage(ofMessage msg);
-
+		void exit();
 
 	
 		
@@ -48,13 +50,16 @@ class ofApp : public ofBaseApp{
 		void onIdle(ofxLibwebsockets::Event& args);
 		void onMessage(ofxLibwebsockets::Event& args);
 		void onBroadcast(ofxLibwebsockets::Event& args);
-		void setupsample (User&);
+		
 		//recorder//
 		void audioIn(float * input, int bufferSize, int nChannels);
 
 		
-		int usercount = 1; //keeps track of the user number in draw
+		//keeps track of the user number in draw
 		 //sets up the first sample user
-		User current;
+		
+		ThreadedObject threadobj;
+
+		int key = 0;
 
 };
