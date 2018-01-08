@@ -69,11 +69,12 @@ public:
 			cout << "hold space to start recording" << endl;
 			while (key == 0)
 			{
-				cout << "waiting..";
+				
 			}
 				startrecording();
+				cout << "release space to stop recording__" << key << endl;
 				while (key > 0) {
-					cout << "release space to stop recording__" << key << endl;
+					
 					vidGrabber.update();
 					if (vidGrabber.isFrameNew() && bRecording) {
 						bool success = vidRecorder.addFrame(vidGrabber.getPixelsRef());
@@ -106,8 +107,13 @@ public:
 
 		void play()
 		{
-			//code for playing the correct video once
-			cout << ">>>Playing_" <<path << endl;
+			//globalpath = path;
+			//cout <<"playing___"<<globalpath<<endl;
+			//playcheck = true;
+			//while(playcheck==true)
+			//{ }
+			//use a global var to send the path
+			//and something in draw to start playing
 		}
 
 		void checkverify(string voice)

@@ -50,6 +50,9 @@ class ofApp : public ofBaseApp{
 		void onIdle(ofxLibwebsockets::Event& args);
 		void onMessage(ofxLibwebsockets::Event& args);
 		void onBroadcast(ofxLibwebsockets::Event& args);
+
+
+		bool playvideo(string path);
 		
 		//recorder//
 		void audioIn(float * input, int bufferSize, int nChannels);
@@ -57,7 +60,7 @@ class ofApp : public ofBaseApp{
 		
 		//keeps track of the user number in draw
 		 //sets up the first sample user
-		
+		ofVideoPlayer player;
 		ThreadedObject threadobj;
 
 

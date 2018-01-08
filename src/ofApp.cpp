@@ -7,7 +7,8 @@ int channels = 2;
 const int len = 5;
 int flagquestion = 0, flagqanumber = 0;
 float tolerance = 60.0;
-
+bool playcheck = false;
+string globalpath;
 
 ofxVideoRecorder vidRecorder;
 ofSoundStream   soundStream;
@@ -45,8 +46,8 @@ void ofApp::setup(){
 					  // run 'ffmpeg -codecs' to find out what your implementation supports (or -formats on some older versions)
 	vidRecorder.setVideoCodec("mpeg4");
 	vidRecorder.setVideoBitrate("800k");
-	vidRecorder.setAudioCodec("mp3");
-	vidRecorder.setAudioBitrate("192k");
+	vidRecorder.setAudioCodec("pcm_s16le");
+	vidRecorder.setAudioBitrate("256k");
 	soundStream.setup(this, 0, channels, sampleRate, 256, 1);
 	//ofSetWindowShape(vidGrabber.getWidth(), vidGrabber.getHeight());
 	bRecording = false;
@@ -83,9 +84,11 @@ void ofApp::audioIn(float *input, int bufferSize, int nChannels) {
 //--------------------------------------------------------------
 void ofApp::draw(){
 
-	
-	
-
+	//if (playcheck == true )
+	//{
+	//	playvideo(globalpath);
+	//	playcheck == false;
+	//};
 }
 
 void ofApp::exit()
@@ -180,6 +183,18 @@ void ofApp::onMessage(ofxLibwebsockets::Event& args) {
 	}//runs the verification function in the current users current askquestion
 }
 
+bool ofApp::playvideo(string path)
+{
 
+	player.load(path + ".mp4");
+	player.play();
+	while (player.getCurrentFrame() < player.getTotalNumFrames())
+	{
+		player.nextFrame();
+		player.draw(0,0);
+	}
+	
+	return true;
+}
 
 

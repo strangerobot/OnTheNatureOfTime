@@ -16,3 +16,6 @@ extern ofSoundStream   soundStream;
 extern ofFbo  recordFbo;
 extern ofPixels recordPixels;
 extern int key;
+extern bool playcheck;
+extern string globalpath;
+
