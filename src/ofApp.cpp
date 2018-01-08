@@ -84,11 +84,13 @@ void ofApp::audioIn(float *input, int bufferSize, int nChannels) {
 //--------------------------------------------------------------
 void ofApp::draw(){
 
-	//if (playcheck == true )
-	//{
-	//	playvideo(globalpath);
-	//	playcheck == false;
-	//};
+	ofDrawCircle(100, 100, 100);
+	if (playcheck == true )
+	{
+	playvideo(globalpath);
+	playcheck =false;
+	}
+	
 }
 
 void ofApp::exit()
@@ -190,8 +192,10 @@ bool ofApp::playvideo(string path)
 	player.play();
 	while (player.getCurrentFrame() < player.getTotalNumFrames())
 	{
-		player.nextFrame();
-		player.draw(0,0);
+		player.update();
+		player.draw(0, 0);
+		ofSleepMillis(33.3333);
+		cout << player.getCurrentFrame()<<endl;
 	}
 	
 	return true;

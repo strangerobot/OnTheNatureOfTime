@@ -107,11 +107,13 @@ public:
 
 		void play()
 		{
-			//globalpath = path;
-			//cout <<"playing___"<<globalpath<<endl;
-			//playcheck = true;
-			//while(playcheck==true)
-			//{ }
+			globalpath = path;
+			cout <<"playing___"<<globalpath<<endl;
+			playcheck = true;
+			while(playcheck==true)
+			{ }
+			cout << "_______________________Out of loop \n";
+			playcheck = false;
 			//use a global var to send the path
 			//and something in draw to start playing
 		}
