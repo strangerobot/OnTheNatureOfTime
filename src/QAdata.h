@@ -67,18 +67,22 @@ public:
 		void recordandwait()
 		{
 			cout << "hold space to start recording" << endl;
-			startrecording();
-			cout << "release space to stop recording__" << key << endl;
-			while (key > 0) {
-				
-				vidGrabber.update();
-				if (vidGrabber.isFrameNew() && bRecording) {
-					bool success = vidRecorder.addFrame(vidGrabber.getPixelsRef());
-					if (!success) {
-						ofLogWarning("This frame was not added!");
+			while (key == 0)
+			{
+				cout << "waiting..";
+			}
+				startrecording();
+				while (key > 0) {
+					cout << "release space to stop recording__" << key << endl;
+					vidGrabber.update();
+					if (vidGrabber.isFrameNew() && bRecording) {
+						bool success = vidRecorder.addFrame(vidGrabber.getPixelsRef());
+						if (!success) {
+							ofLogWarning("This frame was not added!");
+						}
 					}
 				}
-			}
+		
 			stoprecording();
 		}
 
@@ -87,7 +91,7 @@ public:
 		{
 			bRecording = !bRecording;
 			if (bRecording && !vidRecorder.isInitialized()) {
-				vidRecorder.setup(path+ext, vidGrabber.getWidth(), vidGrabber.getHeight(), 30, sampleRate, channels);
+				vidRecorder.setup(path, vidGrabber.getWidth(), vidGrabber.getHeight(), 30, sampleRate, channels);
 				vidRecorder.start();
 			}
 		cout << ">starting recording_"<<path<<endl;
