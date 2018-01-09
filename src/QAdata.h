@@ -30,7 +30,7 @@ public:
 		void record( bool question )// function that triggers recording
 		{	
 			vidGrabber.setDesiredFrameRate(30);
-			vidGrabber.initGrabber(640, 480);
+			vidGrabber.initGrabber(1280, 720);
 			globaltextbody = text;
 			for(int i=0;i<10;i++)
 				vidGrabber.update();

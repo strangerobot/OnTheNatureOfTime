@@ -119,13 +119,13 @@ void ofApp::draw(){
 	if (playcheck == true )
 	{
 		player->update();
-		player->draw(0, 0, 640, 480);
+		player->draw(0, 0, ofGetWindowWidth(), ofGetWindowHeight());
 	}
 	else
 	{	
 		
 		playerloop->update();
-		playerloop->draw(0, 0, 640, 480);	
+		playerloop->draw(0, 0, ofGetWindowWidth(), ofGetWindowHeight());
 	}
 
 	headertext.drawString(globaltextheading, 100, 100);

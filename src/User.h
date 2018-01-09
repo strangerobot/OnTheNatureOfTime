@@ -146,7 +146,7 @@ class User// holds the data of each user who interacts with the installation
 	void recordloop()
 	{
 		vidGrabber.setDesiredFrameRate(30);
-		vidGrabber.initGrabber(640, 480);
+		vidGrabber.initGrabber(1280, 720);
 
 		for (int i = 0; i<10; i++) //safety
 			vidGrabber.update();
