@@ -7,8 +7,9 @@ int channels = 2;
 const int len = 5;
 int flagquestion = 0, flagqanumber = 0;
 float tolerance = 60.0;
-bool playcheck = false;
+bool playcheck=false;
 string globalpath,globallooppath;
+string globaltextheading=" Header ", globaltextbody=" Body ", globalvoiceverif = " ";
 
 ofxVideoRecorder vidRecorder;
 ofSoundStream   soundStream;
@@ -21,7 +22,8 @@ void ofApp::setup(){
 
 	
 	
-	
+	headertext.loadFont("base.otf", 28);
+	bodytext.loadFont("base.otf", 18);
 	ofxLibwebsockets::ServerOptions options = ofxLibwebsockets::defaultServerOptions();
 	options.port = 9092;
 	options.bUseSSL = false; // you'll have to manually accept this self-signed cert if 'true'!
@@ -70,14 +72,14 @@ void ofApp::setup(){
 }
 
 //--------------------------------------------------------------
-void ofApp::update(){
+void ofApp::update() {
 
 	if (globalpath != storedpath)
-	{	
+	{
 		delete player;
 		player = new ofVideoPlayer();
 		player->load(globalpath);
-		cout << globalpath<< endl;
+		cout << globalpath << endl;
 		player->setLoopState(OF_LOOP_NONE);
 		player->play();
 		storedpath = globalpath;
@@ -94,13 +96,13 @@ void ofApp::update(){
 		storedlooppath = globallooppath;
 	}
 
-	if (player->getIsMovieDone()>=0.99 || player->isPlaying()!=true)
+	if (player->getIsMovieDone() >= 0.99 || player->isPlaying() != true ) //|| player->isInitialized()!=true
 	{
+	
 		playcheck = false;
 		player->stop();
 		player->close();
-
-	}else player->update();
+	}
 
 
 }
@@ -115,14 +117,19 @@ void ofApp::draw(){
 	
 	if (playcheck == true )
 	{
+		player->update();
 		player->draw(0, 0, 640, 480);
 	}
 	else
-	{
+	{	
+		
 		playerloop->update();
-		playerloop->draw(0, 0, 640, 480);
+		playerloop->draw(0, 0, 640, 480);	
 	}
 
+	headertext.drawString(globaltextheading, 100, 100);
+	bodytext.drawString(globaltextbody, 100, 150);
+	bodytext.drawString(globalvoiceverif, 100, 400);
 }
 
 void ofApp::exit()
@@ -133,7 +140,6 @@ void ofApp::exit()
 
 //--------------------------------------------------------------
 void ofApp::keyPressed(int k){
-
 	key += k;
 
 }
@@ -205,13 +211,15 @@ void ofApp::onClose(ofxLibwebsockets::Event& args) {
 
 //--------------------------------------------------------------
 void ofApp::onIdle(ofxLibwebsockets::Event& args) {
-	cout << "idle" << endl;
+	globalvoiceverif = "...";
 }
 
 void ofApp::onMessage(ofxLibwebsockets::Event& args) {
-	cout << "message " << args.message << endl;
+	globalvoiceverif = args.message;
+	cout << "message " << globalvoiceverif << endl;
 	if (flagquestion == 1)
-	{
+	{	
+		
 		cout << "[?] Verification for __|" <<args.message<< "|___against___|" << threadobj.current.askquestion[flagqanumber].text<<"|"<< endl;
 		threadobj.current.askquestion[flagqanumber].checkverify(args.message);
 	}//runs the verification function in the current users current askquestion

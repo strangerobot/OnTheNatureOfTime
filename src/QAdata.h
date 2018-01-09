@@ -28,16 +28,17 @@ public:
 		
 
 		void record( bool question )// function that triggers recording
-		{
+		{	
 			vidGrabber.setDesiredFrameRate(30);
 			vidGrabber.initGrabber(640, 480);
-			
+			globaltextbody = text;
 			for(int i=0;i<10;i++)
 				vidGrabber.update();
 
 			if(question==true)
 			{ 
 				flagquestion = 1;
+				globaltextheading = " Ask ";
 				do
 				{
 					///////cout << "Press the button to record"<<endl; //replace with gui part
@@ -57,9 +58,9 @@ public:
 
 
 			}
-
 			if (question == false)
-			{
+			{	
+				globaltextheading = "Reply to";
 				recordandwait();
 			}
 
@@ -71,7 +72,7 @@ public:
 			cout << "hold space to start recording" << endl;
 			while (key == 0)
 			{
-				
+				cout << ""; //for some reason it unfreezes the code;
 			}
 				startrecording();
 				cout << "release space to stop recording__" << key << endl;
@@ -109,11 +110,16 @@ public:
 
 		void play()
 		{
-			globalpath = path+".mp4";
+			globaltextheading = "Playing";
+			globaltextbody = " ";
+			globalpath =path+".mp4";
 			cout <<"playing___"<<globalpath<<endl;
-			playcheck = true;
+			
+				playcheck = true;
 			while(playcheck==true)
-			{ }
+			{
+				cout <<"";
+			}
 			cout << "_______________________Out of loop \n";
 		
 			//use a global var to send the path

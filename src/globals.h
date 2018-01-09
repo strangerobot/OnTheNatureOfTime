@@ -17,5 +17,5 @@ extern ofFbo  recordFbo;
 extern ofPixels recordPixels;
 extern int key;
 extern bool playcheck;
-extern string globalpath,globallooppath;
+extern string globalpath,globallooppath,globaltextheading,globaltextbody,globalvoiceverif;
 

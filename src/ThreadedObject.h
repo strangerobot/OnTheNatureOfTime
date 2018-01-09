@@ -62,8 +62,8 @@ public:
 		for (int i = 0; i < 5; i++)
 		{
 			sample.askquestion[i].verification = 1;
-			sample.askquestion[i].path = "sample_askquestion_" + ofToString(i);
 			sample.giveanswer[i].path = "sample_giveanswer_" + ofToString(i);
+			sample.askquestion[i].path = "sample_askquestion_" + ofToString(i);
 			cout << sample.askquestion[i].path << endl;
 		}
 		cout << "____sample intialised____" << endl;

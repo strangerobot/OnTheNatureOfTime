@@ -61,6 +61,7 @@ public:
 		 //sets up the first sample user
 		ofVideoPlayer *player, *playerloop;
 		ThreadedObject threadobj;
-
+		ofTrueTypeFont headertext;
+		ofTrueTypeFont bodytext;
 
 };
