@@ -29,6 +29,7 @@
         // By enabling "continuous", Chrome will keep the microphone active.
 
         recognition.continuous = true;
+		recognition.interimResults = true;
 
         recognition.onresult = function(event) {
 

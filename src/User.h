@@ -18,7 +18,8 @@ class User// holds the data of each user who interacts with the installation
 	public:
 
 		int type,usernumber; //question index 0=a, 1=b; //count is the user number for file saving purposes
-		QAdata questionask[5], giveanswer[5], askquestion[5], answergive[5]; //_Debug phase _ using number instead of variable
+		QAdata questionask[5], giveanswer[5], askquestion[5], answergive[5];//_Debug phase _ using number instead of variable
+		ofVideoGrabber vidGrabber;
 		
 		struct Index {
 			string qa[5];
@@ -92,11 +93,13 @@ class User// holds the data of each user who interacts with the installation
 	//<below> Runs the current user
 	void run()
 	{	
-		//ask user to settle down before starting loop
-		//play a video about transporting them somewhere
-		//record there footage meanwhile
-		//use this footage as a filler
-		startloop();
+
+		startloop("defaultnewuser");
+		wait();//intialiser
+		recordloop(); //when key is pressed it just records a few second long clip
+		playtransition(); //fancyvisual
+		startloop(ofToString(usernumber-1));
+
 		cout << "Running_user_" << usernumber << endl;
 		for (int i = 0; i<2 && ofGetKeyPressed() != 'e'; i++) //if e is pressed the program exits
 		{	
@@ -133,12 +136,77 @@ class User// holds the data of each user who interacts with the installation
 
 	}
 
-	void startloop()
+	void startloop(string path)
 	{
-		globallooppath = ofToString(usernumber-1) + ".mp4";
+		globallooppath = path + ".mp4";
 		cout << "playingloop_" << globallooppath << endl;
 	}
-	};
+	
 
+	void recordloop()
+	{
+		vidGrabber.setDesiredFrameRate(30);
+		vidGrabber.initGrabber(640, 480);
+
+		for (int i = 0; i<10; i++) //safety
+			vidGrabber.update();
+
+		startrecording();
+		for (int i=0;i<20;i++)
+		{
+			ofSleepMillis(33.33);
+			vidGrabber.update();
+			if (vidGrabber.isFrameNew() && bRecording && i>5) { //so that the intial clicking action of user doesnt get recorded
+				bool success = vidRecorder.addFrame(vidGrabber.getPixelsRef());
+				if (!success) {
+					ofLogWarning("This frame was not added!");
+				}
+			}
+		}
+
+		stoprecording();
+		vidGrabber.close();
+	}
+
+	void startrecording()
+	{
+		bRecording = !bRecording;
+		if (bRecording && !vidRecorder.isInitialized()) {
+			vidRecorder.setup(ofToString(usernumber), vidGrabber.getWidth(), vidGrabber.getHeight(), 30, sampleRate, channels);
+			vidRecorder.start();
+		}
+	}
+
+	void stoprecording()
+	{
+		bRecording = false;
+		vidRecorder.close();
+		cout << ">stopping recording" << endl;
+	}
+
+	void playtransition()
+	{
+		globalpath = "defaulttransition.mp4";
+	
+		playcheck = true;
+		while (playcheck == true)
+		{
+			cout << "";
+		}
+		cout << "_______________________Out of loop \n";
+
+	}
+
+	void wait()
+	{
+		while (key == 0)
+		{
+			cout << ""; //for some reason it unfreezes the code
+		}
+	}
+
+
+
+	};
 
 
