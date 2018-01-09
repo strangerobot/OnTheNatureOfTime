@@ -38,6 +38,9 @@
             // Send the result string via WebSocket to the running Processing Sketch
             ws.send(transcript);
         }
+		recognition.onend = function() {
+		recognition.start();
+		};
 
         // Start the recognition
         recognition.start();
@@ -45,5 +48,6 @@
 </script>
 </head>
 <body>
+<h1> On the nature of time _ web plugin </h1>
 </body>
 </html>

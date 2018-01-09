@@ -51,6 +51,7 @@ class ofApp : public ofBaseApp{
 		void onMessage(ofxLibwebsockets::Event& args);
 		void onBroadcast(ofxLibwebsockets::Event& args);
 		string storedpath = " ";
+		string url = "http";
 		
 		//recorder//
 		void audioIn(float * input, int bufferSize, int nChannels);
