@@ -54,6 +54,8 @@ public:
 
 					stoprecording();
 				} while (verification != 1);
+
+
 			}
 
 			if (question == false)
@@ -61,7 +63,7 @@ public:
 				recordandwait();
 			}
 
-
+			vidGrabber.close();
 		}
 
 		void recordandwait()

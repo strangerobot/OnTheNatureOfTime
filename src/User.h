@@ -91,9 +91,14 @@ class User// holds the data of each user who interacts with the installation
 
 	//<below> Runs the current user
 	void run()
-	{
+	{	
+		//ask user to settle down before starting loop
+		//play a video about transporting them somewhere
+		//record there footage meanwhile
+		//use this footage as a filler
+		startloop();
 		cout << "Running_user_" << usernumber << endl;
-		for (int i = 0; i<2 && ofGetKeyPressed() != 'e'; i++) //if e is pressed the program exits
+		for (int i = 0; i<1 && ofGetKeyPressed() != 'e'; i++) //if e is pressed the program exits
 		{	
 			flagqanumber = i; //sends question number to the voice recognition code
 			////while (ofGetKeyPressed() != 'c') { cout << "getquestion" << endl; };
@@ -125,6 +130,12 @@ class User// holds the data of each user who interacts with the installation
 		index[1].qa[3] = " jack";
 		index[1].qa[4] = " kidney";
 
+	}
+
+	void startloop()
+	{
+		globallooppath = (usernumber-1) + ".mp4";
+		cout << "playingloop_" << globallooppath << endl;
 	}
 	};
 

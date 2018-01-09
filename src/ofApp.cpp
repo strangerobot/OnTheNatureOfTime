@@ -8,7 +8,7 @@ const int len = 5;
 int flagquestion = 0, flagqanumber = 0;
 float tolerance = 60.0;
 bool playcheck = false;
-string globalpath;
+string globalpath,globallooppath;
 
 ofxVideoRecorder vidRecorder;
 ofSoundStream   soundStream;
@@ -56,7 +56,7 @@ void ofApp::setup(){
 	///start the server
 	cout << "____sleep";
 	ofSleepMillis(1000);
-	string url = "http";
+	
 	if (server.usingSSL()) {
 		url += "s";
 	}
@@ -64,7 +64,7 @@ void ofApp::setup(){
 	ofLaunchBrowser(url);
 	///
 
-
+	globallooppath = " ";
 
 	threadobj.start(); //trying to run the service in parallel to the main program
 }
@@ -73,12 +73,36 @@ void ofApp::setup(){
 void ofApp::update(){
 
 	if (globalpath != storedpath)
-	{
-		player.load(globalpath);
+	{	
+		delete player;
+		player = new ofVideoPlayer();
+		player->load(globalpath);
 		cout << globalpath<< endl;
-		player.play();
+		player->setLoopState(OF_LOOP_NONE);
+		player->play();
 		storedpath = globalpath;
 	}
+
+	if (globallooppath != storedlooppath)
+	{
+		delete playerloop;
+		playerloop = new ofVideoPlayer();
+		playerloop->load(globallooppath);
+		cout << globallooppath << endl;
+		playerloop->setLoopState(OF_LOOP_PALINDROME);
+		playerloop->play();
+		storedlooppath = globallooppath;
+	}
+
+	if (player->getIsMovieDone()>=0.99 || player->isPlaying()!=true)
+	{
+		playcheck = false;
+		player->stop();
+		player->close();
+
+	}else player->update();
+
+
 }
 
 void ofApp::audioIn(float *input, int bufferSize, int nChannels) {
@@ -91,14 +115,14 @@ void ofApp::draw(){
 	
 	if (playcheck == true )
 	{
-		player.update();
-		player.draw(0, 0, 640, 480);
+		player->draw(0, 0, 640, 480);
 	}
-	if(player.getCurrentFrame()>=player.getTotalNumFrames())
+	else
 	{
-		playcheck = false;
+		playerloop->update();
+		playerloop->draw(0, 0, 640, 480);
 	}
-	
+
 }
 
 void ofApp::exit()
@@ -131,7 +155,7 @@ void ofApp::mouseDragged(int x, int y, int button){
 
 //--------------------------------------------------------------
 void ofApp::mousePressed(int x, int y, int button){
-
+	
 }
 
 //--------------------------------------------------------------

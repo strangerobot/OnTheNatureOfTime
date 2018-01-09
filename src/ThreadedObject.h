@@ -25,7 +25,6 @@ public:
 		setupsample(sample);
 		cout << "00_sample test" << sample.giveanswer[0].path << endl;
 		current.Switch(sample, usercount);
-		usercount++;
 		cout << "01_user test" << current.answergive[0].path << endl;
 		// Mutex blocking is set to true by default
 		// It is rare that one would want to use startThread(false).
