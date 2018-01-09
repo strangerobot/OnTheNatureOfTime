@@ -63,5 +63,7 @@ public:
 		ThreadedObject threadobj;
 		ofTrueTypeFont headertext;
 		ofTrueTypeFont bodytext;
+	
+
 
 };

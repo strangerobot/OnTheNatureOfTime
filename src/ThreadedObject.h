@@ -12,6 +12,7 @@
 /// mutexes).
 class ThreadedObject : public ofThread
 {
+
 public:
 
 	int usercount = 1;
@@ -20,7 +21,7 @@ public:
 	/// variable in an initialization list.
 	/// Start the thread.
 	void start()
-	{
+	{	
 		User sample;
 		setupsample(sample);
 		cout << "00_sample test" << sample.giveanswer[0].path << endl;
@@ -62,8 +63,8 @@ public:
 		for (int i = 0; i < 5; i++)
 		{
 			sample.askquestion[i].verification = 1;
-			sample.giveanswer[i].path = "sample_giveanswer_" + ofToString(i);
-			sample.askquestion[i].path = "sample_askquestion_" + ofToString(i);
+			sample.giveanswer[i].path = "0_giveanswer_" + ofToString(i);
+			sample.askquestion[i].path = "0_askquestion_" + ofToString(i);
 			cout << sample.askquestion[i].path << endl;
 		}
 		cout << "____sample intialised____" << endl;

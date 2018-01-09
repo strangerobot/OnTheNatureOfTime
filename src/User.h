@@ -113,6 +113,7 @@ class User// holds the data of each user who interacts with the installation
 			////while (ofGetKeyPressed() != 'c') { cout << "getreply" << endl; }; //wait till c is pressed //arduino wait //prompt
 			cout << "04.getreply" << endl;
 			answergive[i].play();
+			cout << "cycle_" <<i<<"_done" << endl;
 		}
 	}
 
@@ -134,7 +135,7 @@ class User// holds the data of each user who interacts with the installation
 
 	void startloop()
 	{
-		globallooppath = ofToString(usernumber) + ".mp4";
+		globallooppath = ofToString(usernumber-1) + ".mp4";
 		cout << "playingloop_" << globallooppath << endl;
 	}
 	};

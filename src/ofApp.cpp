@@ -19,7 +19,7 @@ int key = 0;
 
 //--------------------------------------------------------------
 void ofApp::setup(){
-
+	
 	
 	
 	headertext.loadFont("base.otf", 28);
@@ -67,7 +67,8 @@ void ofApp::setup(){
 	///
 
 	globallooppath = " ";
-
+	player = new ofVideoPlayer();
+	globalpath = "0_askquestion_0.mp4";
 	threadobj.start(); //trying to run the service in parallel to the main program
 }
 
@@ -91,12 +92,12 @@ void ofApp::update() {
 		playerloop = new ofVideoPlayer();
 		playerloop->load(globallooppath);
 		cout << globallooppath << endl;
-		playerloop->setLoopState(OF_LOOP_PALINDROME);
+		playerloop->setLoopState(OF_LOOP_NORMAL);
 		playerloop->play();
 		storedlooppath = globallooppath;
 	}
 
-	if (player->getIsMovieDone() >= 0.99 || player->isPlaying() != true ) //|| player->isInitialized()!=true
+	if (player->getIsMovieDone() >= 0.99)
 	{
 	
 		playcheck = false;
