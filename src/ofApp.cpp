@@ -72,8 +72,13 @@ void ofApp::setup(){
 //--------------------------------------------------------------
 void ofApp::update(){
 
-
-
+	if (globalpath != storedpath)
+	{
+		player.load(globalpath);
+		cout << globalpath<< endl;
+		player.play();
+		storedpath = globalpath;
+	}
 }
 
 void ofApp::audioIn(float *input, int bufferSize, int nChannels) {
@@ -83,12 +88,15 @@ void ofApp::audioIn(float *input, int bufferSize, int nChannels) {
 
 //--------------------------------------------------------------
 void ofApp::draw(){
-
-	ofDrawCircle(100, 100, 100);
+	
 	if (playcheck == true )
 	{
-	playvideo(globalpath);
-	playcheck =false;
+		player.update();
+		player.draw(0, 0, 640, 480);
+	}
+	if(player.getCurrentFrame()>=player.getTotalNumFrames())
+	{
+		playcheck = false;
 	}
 	
 }
@@ -185,20 +193,5 @@ void ofApp::onMessage(ofxLibwebsockets::Event& args) {
 	}//runs the verification function in the current users current askquestion
 }
 
-bool ofApp::playvideo(string path)
-{
-
-	player.load(path + ".mp4");
-	player.play();
-	while (player.getCurrentFrame() < player.getTotalNumFrames())
-	{
-		player.update();
-		player.draw(0, 0);
-		ofSleepMillis(33.3333);
-		cout << player.getCurrentFrame()<<endl;
-	}
-	
-	return true;
-}
 
 

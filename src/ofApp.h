@@ -50,9 +50,7 @@ class ofApp : public ofBaseApp{
 		void onIdle(ofxLibwebsockets::Event& args);
 		void onMessage(ofxLibwebsockets::Event& args);
 		void onBroadcast(ofxLibwebsockets::Event& args);
-
-
-		bool playvideo(string path);
+		string storedpath = " ";
 		
 		//recorder//
 		void audioIn(float * input, int bufferSize, int nChannels);
