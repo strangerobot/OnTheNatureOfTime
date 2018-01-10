@@ -79,7 +79,7 @@ class User// holds the data of each user who interacts with the installation
 				askquestion[i].verification = 0;// write code here for path allocation
 				giveanswer[i].verification = 1; //this function gets the question the user is supposed to answer and puts it into the text container
 				giveanswer[i].path = ofToString(usernumber) + "_giveanswer_"+ ofToString(i);// write code here for path allocation
-				giveanswer[i].text = index[type].qa[i];
+				giveanswer[i].text =index[type].qa[i];
 				//temp.askquestion[i].data=0;
 				//temp.giveanswer[i].data=0;
 
@@ -95,13 +95,18 @@ class User// holds the data of each user who interacts with the installation
 	{	
 
 		startloop("defaultnewuser");
+		globaltextheading = "Sitdown on the chair";
+		globaltextbody = "Focus at the circle \n\nand press a key to intialize";
 		wait();//intialiser
 		recordloop(); //when key is pressed it just records a few second long clip
+		globaltextheading = "Intialiazing...";
+		globaltextbody = "Please be patient";
 		playtransition(); //fancyvisual
 		startloop(ofToString(usernumber-1));
-
+		globaltextheading = "Connected";
+		globaltextbody = " ";
 		cout << "Running_user_" << usernumber << endl;
-		for (int i = 0; i<2 && ofGetKeyPressed() != 'e'; i++) //if e is pressed the program exits
+		for (int i = 0; i<5 && ofGetKeyPressed() != 'e'; i++) //if e is pressed the program exits
 		{	
 			flagqanumber = i; //sends question number to the voice recognition code
 			////while (ofGetKeyPressed() != 'c') { cout << "getquestion" << endl; };
@@ -118,21 +123,22 @@ class User// holds the data of each user who interacts with the installation
 			answergive[i].play();
 			cout << "cycle_" <<i<<"_done" << endl;
 		}
+		//playtransition(); //disconnected
 	}
 
 	void intialiseindex() {
 
-		index[0].qa[0] = " what is your name";
-		index[0].qa[1] = " how are you";
-		index[0].qa[2] = " artist";
-		index[0].qa[3] = " dog";
-		index[0].qa[4] = " elephant";
+		index[0].qa[0] = " hello who is this";
+		index[0].qa[1] = " are you recorded";
+		index[0].qa[2] = " are you from the future";
+		index[0].qa[3] = " are you scripted";
+		index[0].qa[4] = " are you human";
 
-		index[1].qa[0] = " who are you";
-		index[1].qa[1] = " how do you do";
-		index[1].qa[2] = " hype";
-		index[1].qa[3] = " jack";
-		index[1].qa[4] = " kidney";
+		index[1].qa[0] = " hello who are you";
+		index[1].qa[1] = " are you real";
+		index[1].qa[2] = " are you from the past";
+		index[1].qa[3] = " are you free";
+		index[1].qa[4] = " are you machine";
 
 	}
 

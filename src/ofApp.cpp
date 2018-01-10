@@ -1,4 +1,4 @@
-#pragma once
+﻿#pragma once
 #include "ofApp.h"
 
 bool bRecording = false; //checks if recording is on or not
@@ -7,9 +7,9 @@ int channels = 2;
 const int len = 5;
 int flagquestion = 0, flagqanumber = 0;
 float tolerance = 60.0;
-bool playcheck=false;
-string globalpath,globallooppath;
-string globaltextheading=" Header ", globaltextbody=" Body ", globalvoiceverif = " ";
+bool playcheck = false;
+string globalpath, globallooppath;
+string globaltextheading = "Header ", globaltextbody = "Body ", globalvoiceverif = " ", globalrec = " launch ";
 
 ofxVideoRecorder vidRecorder;
 ofSoundStream   soundStream;
@@ -18,10 +18,10 @@ ofPixels recordPixels;
 int key = 0;
 
 //--------------------------------------------------------------
-void ofApp::setup(){
-	
-	
-	
+void ofApp::setup() {
+
+
+
 	headertext.loadFont("base.otf", 28);
 	bodytext.loadFont("base.otf", 18);
 	ofxLibwebsockets::ServerOptions options = ofxLibwebsockets::defaultServerOptions();
@@ -44,12 +44,12 @@ void ofApp::setup(){
 	vidRecorder.setFfmpegLocation("ffmpeg"); // use this is you have ffmpeg installed in your data folder
 #endif
 
-					  // override the default codecs if you like
-					  // run 'ffmpeg -codecs' to find out what your implementation supports (or -formats on some older versions)
+											 // override the default codecs if you like
+											 // run 'ffmpeg -codecs' to find out what your implementation supports (or -formats on some older versions)
 	vidRecorder.setVideoCodec("mpeg4");
-	vidRecorder.setVideoBitrate("800k");
+	vidRecorder.setVideoBitrate("1200k");
 	vidRecorder.setAudioCodec("pcm_s16le");
-	vidRecorder.setAudioBitrate("256k");
+	vidRecorder.setAudioBitrate("512k");
 	soundStream.setup(this, 0, channels, sampleRate, 256, 1);
 	//ofSetWindowShape(vidGrabber.getWidth(), vidGrabber.getHeight());
 	bRecording = false;
@@ -58,7 +58,7 @@ void ofApp::setup(){
 	///start the server
 	cout << "____sleep";
 	ofSleepMillis(1000);
-	
+
 	if (server.usingSSL()) {
 		url += "s";
 	}
@@ -81,8 +81,9 @@ void ofApp::update() {
 		player = new ofVideoPlayer();
 		player->load(globalpath);
 		cout << globalpath << endl;
-		player->setLoopState(OF_LOOP_NONE);
+		
 		player->play();
+		player->setLoopState(OF_LOOP_NONE);
 		storedpath = globalpath;
 	}
 
@@ -92,18 +93,19 @@ void ofApp::update() {
 		playerloop = new ofVideoPlayer();
 		playerloop->load(globallooppath);
 		cout << globallooppath << endl;
-		playerloop->setLoopState(OF_LOOP_NORMAL);
+
 		playerloop->play();
+		playerloop->setLoopState(OF_LOOP_NORMAL);
 		storedlooppath = globallooppath;
 	}
 
 	if (player->getIsMovieDone() >= 0.99)
 	{
-	
+		cout << "done";
 		playcheck = false;
 		player->stop();
 		player->close();
-	}
+	}else player->update();
 
 
 }
@@ -113,24 +115,32 @@ void ofApp::audioIn(float *input, int bufferSize, int nChannels) {
 		vidRecorder.addAudioSamples(input, bufferSize, nChannels);
 } //might need to branchout audio in a different thread
 
-//--------------------------------------------------------------
-void ofApp::draw(){
-	
-	if (playcheck == true )
+  //--------------------------------------------------------------
+void ofApp::draw() {
+
+	if (playcheck == true)
 	{
-		player->update();
+
 		player->draw(0, 0, ofGetWindowWidth(), ofGetWindowHeight());
 	}
 	else
-	{	
-		
+	{
+
 		playerloop->update();
 		playerloop->draw(0, 0, ofGetWindowWidth(), ofGetWindowHeight());
 	}
 
-	headertext.drawString(globaltextheading, 100, 100);
-	bodytext.drawString(globaltextbody, 100, 150);
-	bodytext.drawString(globalvoiceverif, 100, 400);
+	ofSetColor(255, 240);
+	headertext.drawString(globaltextheading, 200, 100);
+	bodytext.drawString(globaltextbody, 320, 150);
+	ofSetColor(0,200);
+	bodytext.drawString(globalvoiceverif, 100, ofGetWindowHeight()-160);
+	if(globalrec=="recording")
+	ofSetColor(242,26,26);
+	else
+	ofSetColor(255, 100);
+	bodytext.drawString(globalrec, 100, ofGetWindowHeight() - 200 );
+	ofSetColor(255);
 }
 
 void ofApp::exit()
@@ -140,58 +150,58 @@ void ofApp::exit()
 }
 
 //--------------------------------------------------------------
-void ofApp::keyPressed(int k){
+void ofApp::keyPressed(int k) {
 	key += k;
 
 }
 
 //--------------------------------------------------------------
-void ofApp::keyReleased(int k){
+void ofApp::keyReleased(int k) {
 	key = 0;
 }
 
 //--------------------------------------------------------------
-void ofApp::mouseMoved(int x, int y ){
+void ofApp::mouseMoved(int x, int y) {
 
 }
 
 //--------------------------------------------------------------
-void ofApp::mouseDragged(int x, int y, int button){
-	
-}
-
-//--------------------------------------------------------------
-void ofApp::mousePressed(int x, int y, int button){
-	
-}
-
-//--------------------------------------------------------------
-void ofApp::mouseReleased(int x, int y, int button){
+void ofApp::mouseDragged(int x, int y, int button) {
 
 }
 
 //--------------------------------------------------------------
-void ofApp::mouseEntered(int x, int y){
+void ofApp::mousePressed(int x, int y, int button) {
 
 }
 
 //--------------------------------------------------------------
-void ofApp::mouseExited(int x, int y){
+void ofApp::mouseReleased(int x, int y, int button) {
 
 }
 
 //--------------------------------------------------------------
-void ofApp::windowResized(int w, int h){
+void ofApp::mouseEntered(int x, int y) {
 
 }
 
 //--------------------------------------------------------------
-void ofApp::gotMessage(ofMessage msg){
+void ofApp::mouseExited(int x, int y) {
 
 }
 
 //--------------------------------------------------------------
-void ofApp::dragEvent(ofDragInfo dragInfo){ 
+void ofApp::windowResized(int w, int h) {
+
+}
+
+//--------------------------------------------------------------
+void ofApp::gotMessage(ofMessage msg) {
+
+}
+
+//--------------------------------------------------------------
+void ofApp::dragEvent(ofDragInfo dragInfo) {
 
 }
 
@@ -219,12 +229,11 @@ void ofApp::onMessage(ofxLibwebsockets::Event& args) {
 	globalvoiceverif = args.message;
 	cout << "message " << globalvoiceverif << endl;
 	if (flagquestion == 1)
-	{	
-		
-		cout << "[?] Verification for __|" <<args.message<< "|___against___|" << threadobj.current.askquestion[flagqanumber].text<<"|"<< endl;
+	{
+
+		cout << "[?] Verification for __|" << args.message << "|___against___|" << threadobj.current.askquestion[flagqanumber].text << "|" << endl;
 		threadobj.current.askquestion[flagqanumber].checkverify(args.message);
 	}//runs the verification function in the current users current askquestion
 }
-
 
 

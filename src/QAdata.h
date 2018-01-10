@@ -38,7 +38,7 @@ public:
 			if(question==true)
 			{ 
 				flagquestion = 1;
-				globaltextheading = " Ask ";
+				globaltextheading = "Ask ";
 				do
 				{
 					///////cout << "Press the button to record"<<endl; //replace with gui part
@@ -50,6 +50,7 @@ public:
 					if (verification != 1)
 					{
 						cout << "wrong question, try again" << endl;
+						globaltextheading = "Ask again..";
 						verification = 0;
 					}
 
@@ -70,10 +71,12 @@ public:
 		void recordandwait()
 		{
 			cout << "hold space to start recording" << endl;
+			globalrec = "hold space to record";
 			while (key == 0)
 			{
 				cout << ""; //for some reason it unfreezes the code;
 			}
+			globalrec = "recording";
 				startrecording();
 				cout << "release space to stop recording__" << key << endl;
 				while (key > 0) {
@@ -88,6 +91,7 @@ public:
 				}
 		
 			stoprecording();
+			globalrec = " ";
 		}
 
 
@@ -110,7 +114,7 @@ public:
 
 		void play()
 		{
-			globaltextheading = "Playing";
+			globaltextheading = "Transmitting..";
 			globaltextbody = " ";
 			globalpath =path+".mp4";
 			cout <<"playing___"<<globalpath<<endl;
