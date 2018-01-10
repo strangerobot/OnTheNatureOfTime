@@ -65,21 +65,21 @@ class User// holds the data of each user who interacts with the installation
 		{
 			intialiseindex();
 			usernumber = number;
-			int typeset;
+			int typeset=type;
 			if (temp.type == 0)
-				typeset = 1;
-			else typeset = 0;
+				type = 1;
+			else type = 0;
 
 			for (int i = 0; i<len; i++)
 			{
 				questionask[i] = temp.askquestion[i];
 				answergive[i] = temp.giveanswer[i];
-				askquestion[i].text = index[typeset].qa[i]; //intialises question of type from the index
+				askquestion[i].text = index[type].qa[i]; //intialises question of type from the index
 				askquestion[i].path = ofToString(usernumber) + "_askquestion_" + ofToString(i);
 				askquestion[i].verification = 0;// write code here for path allocation
 				giveanswer[i].verification = 1; //this function gets the question the user is supposed to answer and puts it into the text container
 				giveanswer[i].path = ofToString(usernumber) + "_giveanswer_"+ ofToString(i);// write code here for path allocation
-				giveanswer[i].text =index[type].qa[i];
+				giveanswer[i].text =index[typeset].qa[i];
 				//temp.askquestion[i].data=0;
 				//temp.giveanswer[i].data=0;
 
@@ -93,7 +93,6 @@ class User// holds the data of each user who interacts with the installation
 	//<below> Runs the current user
 	void run()
 	{	
-
 		startloop("waiting.mp4");
 		globaltextheading = "Sitdown on the chair";
 		globaltextbody = "Focus at the circle \nand press a key to intialize";
@@ -123,7 +122,7 @@ class User// holds the data of each user who interacts with the installation
 			answergive[i].play();
 			cout << "cycle_" <<i<<"_done" << endl;
 		}
-		//playtransition(); //disconnected
+		playtransition2(); //disconnected
 	}
 
 	void intialiseindex() {
@@ -134,7 +133,7 @@ class User// holds the data of each user who interacts with the installation
 		index[0].qa[3] = " are you scripted";
 		index[0].qa[4] = " are you human";
 
-		index[1].qa[0] = " hello who are you";
+		index[1].qa[0] = " who are you";
 		index[1].qa[1] = " are you real";
 		index[1].qa[2] = " are you from the past";
 		index[1].qa[3] = " are you free";
@@ -194,6 +193,19 @@ class User// holds the data of each user who interacts with the installation
 	{
 		globalpath = "intializing.mp4";
 	
+		playcheck = true;
+		while (playcheck == true)
+		{
+			cout << "";
+		}
+		cout << "_______________________Out of loop \n";
+
+	}
+
+	void playtransition2()
+	{
+		globalpath = "closing.mp4";
+
 		playcheck = true;
 		while (playcheck == true)
 		{

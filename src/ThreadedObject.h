@@ -47,7 +47,7 @@ public:
 		while (isThreadRunning())
 		{
 
-			if (usercount < 5) // for testing purpose
+			if (usercount < 20) // for testing purpose
 			{
 				current.run();
 				usercount++;
