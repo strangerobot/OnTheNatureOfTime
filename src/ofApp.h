@@ -59,7 +59,7 @@ public:
 		
 		//keeps track of the user number in draw
 		 //sets up the first sample user
-		ofVideoPlayer *player, *playerloop;
+		ofVideoPlayer *player, *playerloop , glitch;
 		ThreadedObject threadobj;
 		ofTrueTypeFont headertext;
 		ofTrueTypeFont bodytext;

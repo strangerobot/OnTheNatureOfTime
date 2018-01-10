@@ -94,15 +94,15 @@ class User// holds the data of each user who interacts with the installation
 	void run()
 	{	
 
-		startloop("defaultnewuser");
+		startloop("waiting.mp4");
 		globaltextheading = "Sitdown on the chair";
-		globaltextbody = "Focus at the circle \n\nand press a key to intialize";
+		globaltextbody = "Focus at the circle \nand press a key to intialize";
 		wait();//intialiser
 		recordloop(); //when key is pressed it just records a few second long clip
 		globaltextheading = "Intialiazing...";
 		globaltextbody = "Please be patient";
 		playtransition(); //fancyvisual
-		startloop(ofToString(usernumber-1));
+		startloop(ofToString(usernumber-1)+".mp4");
 		globaltextheading = "Connected";
 		globaltextbody = " ";
 		cout << "Running_user_" << usernumber << endl;
@@ -144,7 +144,7 @@ class User// holds the data of each user who interacts with the installation
 
 	void startloop(string path)
 	{
-		globallooppath = path + ".mp4";
+		globallooppath = path;
 		cout << "playingloop_" << globallooppath << endl;
 	}
 	
@@ -192,7 +192,7 @@ class User// holds the data of each user who interacts with the installation
 
 	void playtransition()
 	{
-		globalpath = "defaulttransition.mp4";
+		globalpath = "intializing.mp4";
 	
 		playcheck = true;
 		while (playcheck == true)

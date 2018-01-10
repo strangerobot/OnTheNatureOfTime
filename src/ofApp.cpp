@@ -9,7 +9,7 @@ int flagquestion = 0, flagqanumber = 0;
 float tolerance = 60.0;
 bool playcheck = false;
 string globalpath, globallooppath;
-string globaltextheading = "Header ", globaltextbody = "Body ", globalvoiceverif = " ", globalrec = " launch ";
+string globaltextheading = "Header ", globaltextbody = "Body ", globalvoiceverif = " ", globalrec = "launch ";
 
 ofxVideoRecorder vidRecorder;
 ofSoundStream   soundStream;
@@ -65,7 +65,9 @@ void ofApp::setup() {
 	url += "://localhost:" + ofToString(server.getPort());
 	ofLaunchBrowser(url);
 	///
-
+	glitch.load("glitch.mp4");
+	glitch.play();
+	glitch.setLoopState(OF_LOOP_NORMAL);
 	globallooppath = " ";
 	player = new ofVideoPlayer();
 	globalpath = "0_askquestion_0.mp4";
@@ -118,6 +120,8 @@ void ofApp::audioIn(float *input, int bufferSize, int nChannels) {
   //--------------------------------------------------------------
 void ofApp::draw() {
 
+
+	ofSetColor(255);
 	if (playcheck == true)
 	{
 
@@ -125,14 +129,14 @@ void ofApp::draw() {
 	}
 	else
 	{
-
+		
 		playerloop->update();
 		playerloop->draw(0, 0, ofGetWindowWidth(), ofGetWindowHeight());
 	}
 
 	ofSetColor(255, 240);
-	headertext.drawString(globaltextheading, 200, 100);
-	bodytext.drawString(globaltextbody, 320, 150);
+	headertext.drawString(globaltextheading, 100, 200);
+	bodytext.drawString(globaltextbody, 100, 270);
 	ofSetColor(0,200);
 	bodytext.drawString(globalvoiceverif, 100, ofGetWindowHeight()-160);
 	if(globalrec=="recording")
@@ -141,6 +145,17 @@ void ofApp::draw() {
 	ofSetColor(255, 100);
 	bodytext.drawString(globalrec, 100, ofGetWindowHeight() - 200 );
 	ofSetColor(255);
+
+	if (globallooppath != "intializing.mp4" && globalpath != "waiting.mp4") //glitchadder
+	{
+		ofSetColor(255, 200);
+	} else ofSetColor(255, 0);
+
+		ofEnableBlendMode(OF_BLENDMODE_ADD);
+		glitch.update();
+		glitch.draw(0, 0 , ofGetWindowWidth() , ofGetWindowHeight());
+		ofDisableBlendMode();
+
 }
 
 void ofApp::exit()
